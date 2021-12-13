@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.App {
+	text-align: center;
+}
+
+.home {
+	padding-top: 4rem;
+	min-height: 100vh;
+}
+
+.year-list-container {
+	display: flex;
+	max-width: 480px;
+	margin: auto;
+	border: 1px solid black;
+	padding: 1rem;
+
+	.year-link {
+		font-size: 2rem;
+		border-right: 2px solid black;
+		padding-right: 0.5rem;
+		flex-grow: 1;
+		cursor: pointer;
+
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+
+	.year-link-selected {
+		font-weight: bold;
+	}
+}
+
+.what-i-was-doing {
+	max-width: 480px;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.about-me {
+	max-width: 780px;
+	margin: auto;
+}
+
+.separator {
+	max-width: 480px;
+	margin: 3rem auto;
+	border-bottom: 1px solid black;
+}
+
+#raw {
+	font-family: serif;
+}
+#skeuomorphic {
+}
+#flat-design {
+	font-family: 'Open Sans', sans-serif;
+	.home {
+		background-color: #3498db;
+		color: white;
+	}
+
+	.year-list-container {
+		color: #3498db;
+		background: white;
+		border: none;
+
+		.year-link {
+			border-right: none;
+		}
+	}
+
+	.year-link-selected {
+		font-weight: bold;
+	}
+
+	h2 {
+		font-weight: 300;
+	}
+
+	.separator {
+		border-color: white;
+		border-width: 2px;
+	}
+}
