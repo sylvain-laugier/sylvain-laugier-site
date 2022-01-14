@@ -1,37 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { designEras, DesignEras } from '../utils/constants';
-import AboutMe from '../components/AboutMe';
-import SocialMediaLinks from '../components/SocialMediaLinks';
-import Technologies from '../components/Technologies';
-import TitleIntro from '../components/TitleIntro';
-import WhatIWasDoing from '../components/WhatIWasDoing';
-import YearList from '../components/YearList' ;
+import YearList from '../components/shared/YearList';
+import {
+	FlatDesignLayout,
+	NinetiesLayout,
+	SkeuomorphicLayout,
+} from '../components/year-layouts';
 
 // markup
 const IndexPage = () => {
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.nineties);
+	return (
+		<main className="App">
+			<title>Home Page</title>
 
-  const [designEra, setDesignEra] = useState<DesignEras>(designEras.raw)
-  return (
-    <main className="App" >
-      <title>Home Page</title>
+			<div className="div-id" id={designEra}>
+				<div className="home">
+					<YearList designEra={designEra} setDesignEra={setDesignEra} />
+					{getYearLayoutComponent(designEra)}
+				</div>
+			</div>
+		</main>
+	);
+};
 
-
-    <div id={designEra}>
-      <div className="home">
-
-      <YearList designEra={designEra} setDesignEra={setDesignEra}/>
-      <TitleIntro /> 
-      <WhatIWasDoing designEra={designEra}/>
-      <div className='separator'></div>
-      <AboutMe />     
-      <Technologies />
-      <SocialMediaLinks />
-
-      </div>
-    </div >
-  
-    </main>
-  )
+function getYearLayoutComponent(designEra: DesignEras) {
+	switch (designEra) {
+		case designEras.flatDesign:
+			return <FlatDesignLayout />;
+		case designEras.nineties:
+			return <NinetiesLayout />;
+		case designEras.skeuomorphic:
+			return <SkeuomorphicLayout />;
+	}
 }
 
-export default IndexPage
+export default IndexPage;

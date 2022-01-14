@@ -1,0 +1,144 @@
+#nineties {
+	font-family: serif;
+
+	color: white;
+	position: absolute;
+	width: 100%;
+	background-image: url('../../images/hubble_deep_field.jpg');
+	background-repeat: repeat;
+
+	.year-list-container {
+		border-color: yellow;
+
+		.year-link {
+			border-color: yellow;
+		}
+	}
+
+	.home {
+		border: 8px solid grey;
+		max-width: 840px;
+		margin: auto;
+		height: 100%;
+		padding: 16px;
+		margin-top: 32px;
+		background-color: black;
+	}
+
+	.nth-visitor {
+		margin-top: 16px;
+		border-top: 3px solid grey;
+		border-bottom: 3px solid grey;
+		padding: 12px 0;
+		font-size: 18px;
+
+		.visitor-number {
+			color: cyan;
+			text-shadow: 2px 2px 3px yellow;
+			font-size: 24px;
+		}
+	}
+
+	.title-intro-container {
+		h1 {
+			font-size: 38px;
+			color: yellow;
+
+			.first-name,
+			.last-name {
+				text-decoration: underline;
+			}
+		}
+		h2 {
+			font-size: 28px;
+			text-decoration: underline;
+		}
+	}
+
+	.what-i-was-doing {
+		border: 3px solid grey;
+		font-family: 'Comic Sans MS', 'Comic Sans', serif;
+		h2 {
+			background-image: url('../../images/ugly-background-gradient.png');
+			background-repeat: repeat-x;
+
+			color: yellow;
+			margin-top: 0;
+			border: 2px solid black;
+		}
+
+		p {
+			padding: 0 12px;
+		}
+	}
+
+	.separator {
+		border-color: yellow;
+		margin-bottom: 16px;
+	}
+
+	font-family: 'Comic Sans MS', 'Comic Sans', serif;
+
+	.technologies {
+		h2 {
+			color: yellow;
+			margin-top: 0;
+		}
+
+		.technologies-list {
+			display: flex;
+			margin: auto;
+			width: 500px;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			li {
+				width: 26%;
+			}
+		}
+	}
+
+	.social-media-container {
+		margin: 32px auto 0 auto;
+		border: 3px solid grey;
+		max-width: 480px;
+
+		h2 {
+			margin: 6px 0;
+			color: cyan;
+			font-family: serif;
+		}
+		.social-media-links {
+			display: flex;
+			justify-content: center;
+			background-image: url('../../images/ugly-background-gradient.png');
+			background-repeat: repeat-x;
+			height: 31px;
+
+			a {
+				margin: 0px 12px;
+				display: flex;
+				align-items: center;
+				img {
+					border: 2px solid black;
+				}
+			}
+		}
+	}
+
+	.history-of-web-design {
+		border: 3px solid grey;
+		font-family: sans-serif;
+		margin-top: 32px;
+		h2 {
+			background-color: yellow;
+			color: black;
+			margin-top: 0;
+			border: 2px solid black;
+		}
+
+		p {
+			padding: 0 12px;
+		}
+	}
+}
