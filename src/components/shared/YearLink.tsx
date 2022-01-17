@@ -14,7 +14,7 @@ export default function YearLink({
 }: PropsWithChildren<YearLinkProps>) {
 	return (
 		<div
-			className={`year-link ${selected && 'year-link-selected'}`}
+			className={`year-link ${selected ? 'year-link-selected' : ''}`}
 			onClick={() => setDesignEra(designEra)}
 		>
 			{children}

@@ -39,9 +39,13 @@ export default function SocialMediaLinks({ designEra }: SocialMediaLinksProps) {
 		);
 	}
 	return (
-		<div>
-			<Button label="Linkedin" href={links.linkedIn} />
-			<Button label="Github" href={links.github} />
+		<div className="social-media-container">
+			<h2>Retrouvez moi sur :</h2>
+			<div className="social-media-links">
+				<Button label="Linkedin" href={links.linkedIn} />
+				<Button label="Github" href={links.github} />
+				<Button label="CodinGame" href={links.github} />
+			</div>
 		</div>
 	);
 }
