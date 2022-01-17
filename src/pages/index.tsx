@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { designEras, DesignEras } from '../utils/constants';
 import YearList from '../components/shared/YearList';
-import {
-	FlatDesignLayout,
-	NinetiesLayout,
-	SkeuomorphicLayout,
-} from '../components/year-layouts';
+import { NinetiesLayout } from '../components/nineties';
+import { NoughtiesLayout } from '../components/noughties';
+import { FlatDesignLayout } from '../components/flat';
+import { SkeuomorphicLayout } from '../components/skeuemorphic';
 
 // markup
 const IndexPage = () => {
@@ -26,10 +25,12 @@ const IndexPage = () => {
 
 function getYearLayoutComponent(designEra: DesignEras) {
 	switch (designEra) {
-		case designEras.flatDesign:
-			return <FlatDesignLayout />;
 		case designEras.nineties:
 			return <NinetiesLayout />;
+		case designEras.noughties:
+			return <NoughtiesLayout />;
+		case designEras.flatDesign:
+			return <FlatDesignLayout />;
 		case designEras.skeuomorphic:
 			return <SkeuomorphicLayout />;
 	}

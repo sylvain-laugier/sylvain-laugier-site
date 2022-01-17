@@ -23,6 +23,13 @@ export default function YearList({ setDesignEra, designEra }: YearListProps) {
 			</YearLink>
 			<YearLink
 				setDesignEra={setDesignEra}
+				designEra={designEras.noughties}
+				selected={designEras.noughties === designEra}
+			>
+				{designEraToYearMap[designEras.noughties]}
+			</YearLink>
+			<YearLink
+				setDesignEra={setDesignEra}
 				designEra={designEras.skeuomorphic}
 				selected={designEras.skeuomorphic === designEra}
 			>

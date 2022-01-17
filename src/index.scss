@@ -66,36 +66,3 @@ code {
 .div-id {
 	min-height: 100vh;
 }
-
-#skeuomorphic {
-}
-#flat-design {
-	font-family: 'Open Sans', sans-serif;
-	.home {
-		background-color: #3498db;
-		color: white;
-	}
-
-	.year-list-container {
-		color: #3498db;
-		background: white;
-		border: none;
-
-		.year-link {
-			border-right: none;
-		}
-	}
-
-	.year-link-selected {
-		font-weight: bold;
-	}
-
-	h2 {
-		font-weight: 300;
-	}
-
-	.separator {
-		border-color: white;
-		border-width: 2px;
-	}
-}
