@@ -7,7 +7,7 @@ export default function TitleIntro() {
 				<span className="first-name">Sylvain</span>{' '}
 				<span className="last-name">Laugier</span>
 			</h1>
-			<h2>Creative web developper</h2>
+			<h2>Creative web developer</h2>
 		</div>
 	);
 }

@@ -58,6 +58,8 @@
 	.what-i-was-doing {
 		border: 3px solid grey;
 		font-family: 'Comic Sans MS', 'Comic Sans', serif;
+		max-width: 480px;
+
 		h2 {
 			background-image: url('../../images/ugly-background-gradient.png');
 			background-repeat: repeat-x;

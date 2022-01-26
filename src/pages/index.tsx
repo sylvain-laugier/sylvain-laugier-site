@@ -5,10 +5,11 @@ import { NinetiesLayout } from '../components/nineties';
 import { NoughtiesLayout } from '../components/noughties';
 import { FlatDesignLayout } from '../components/flat';
 import { SkeuomorphicLayout } from '../components/skeuemorphic';
+import { MaterialLayout } from '../components/material';
 
 // markup
 const IndexPage = () => {
-	const [designEra, setDesignEra] = useState<DesignEras>(designEras.nineties);
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.material);
 	return (
 		<main className="App">
 			<title>Home Page</title>
@@ -33,6 +34,8 @@ function getYearLayoutComponent(designEra: DesignEras) {
 			return <FlatDesignLayout />;
 		case designEras.skeuomorphic:
 			return <SkeuomorphicLayout />;
+		case designEras.material:
+			return <MaterialLayout />;
 	}
 }
 

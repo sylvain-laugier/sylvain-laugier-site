@@ -1,3 +1,4 @@
+import { AppBar, Tab, Tabs } from '@material-ui/core';
 import React from 'react';
 import {
 	designEras,
@@ -11,7 +12,47 @@ interface YearListProps {
 	setDesignEra: SetState<DesignEras>;
 	designEra: DesignEras;
 }
+
+const MaterialTabStyle = { fontSize: '1.5rem' };
 export default function YearList({ setDesignEra, designEra }: YearListProps) {
+	if (designEra === designEras.material) {
+		return (
+			<AppBar position="fixed">
+				<Tabs
+					value={designEras.material}
+					onChange={(e, value) => setDesignEra(value)}
+					centered
+				>
+					<Tab
+						label={designEraToYearMap[designEras.nineties]}
+						value={designEras.nineties}
+						style={MaterialTabStyle}
+					/>
+					<Tab
+						label={designEraToYearMap[designEras.noughties]}
+						value={designEras.noughties}
+						style={MaterialTabStyle}
+					/>
+					<Tab
+						label={designEraToYearMap[designEras.skeuomorphic]}
+						value={designEras.skeuomorphic}
+						style={MaterialTabStyle}
+					/>
+					<Tab
+						label={designEraToYearMap[designEras.flatDesign]}
+						value={designEras.flatDesign}
+						style={MaterialTabStyle}
+					/>
+					<Tab
+						label={designEraToYearMap[designEras.material]}
+						value={designEras.material}
+						style={MaterialTabStyle}
+					/>
+				</Tabs>
+			</AppBar>
+		);
+	}
+
 	return (
 		<div className="year-list-container">
 			<YearLink
@@ -41,6 +82,13 @@ export default function YearList({ setDesignEra, designEra }: YearListProps) {
 				selected={designEras.flatDesign === designEra}
 			>
 				{designEraToYearMap[designEras.flatDesign]}
+			</YearLink>
+			<YearLink
+				setDesignEra={setDesignEra}
+				designEra={designEras.material}
+				selected={false}
+			>
+				{designEraToYearMap[designEras.material]}
 			</YearLink>
 		</div>
 	);

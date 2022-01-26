@@ -1,9 +1,15 @@
 import React from 'react';
+import { designEras, DesignEras } from '../../utils/constants';
 
-export default function Technologies() {
+interface TechnologiesProps {
+	designEra?: DesignEras;
+}
+
+export default function Technologies({ designEra }: TechnologiesProps) {
 	return (
 		<div className="technologies">
 			<h2>Les technos avec lesquelles j'ai travaillé : </h2>
+
 			<ul className="technologies-list">
 				<li> React</li>
 				<li> Typescript</li>

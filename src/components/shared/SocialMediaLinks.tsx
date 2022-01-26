@@ -9,7 +9,7 @@ interface SocialMediaLinksProps {
 	designEra: DesignEras;
 }
 
-const links = {
+export const socialMedialinks = {
 	linkedIn: 'https://linkedin.com',
 	github: 'https://github.com',
 	codinGame: 'https://www.codingame.com/',
@@ -21,13 +21,13 @@ export default function SocialMediaLinks({ designEra }: SocialMediaLinksProps) {
 			<div className="social-media-container">
 				<h2>Retrouvez moi sur :</h2>
 				<div className="social-media-links">
-					<a href={links.linkedIn} target="_blank">
+					<a href={socialMedialinks.linkedIn} target="_blank">
 						<img src={LinkedInNinetiesButton} alt="LinkedIn" title="LinkedIn" />
 					</a>
-					<a href={links.github} target="_blank">
+					<a href={socialMedialinks.github} target="_blank">
 						<img src={GitHubNinetiesButton} alt="GitHub" title="GitHub" />
 					</a>
-					<a href={links.codinGame} target="_blank">
+					<a href={socialMedialinks.codinGame} target="_blank">
 						<img
 							src={CodinGameNinetiesButton}
 							alt="CodinGame"
@@ -42,9 +42,9 @@ export default function SocialMediaLinks({ designEra }: SocialMediaLinksProps) {
 		<div className="social-media-container">
 			<h2>Retrouvez moi sur :</h2>
 			<div className="social-media-links">
-				<Button label="Linkedin" href={links.linkedIn} />
-				<Button label="Github" href={links.github} />
-				<Button label="CodinGame" href={links.github} />
+				<Button label="Linkedin" href={socialMedialinks.linkedIn} />
+				<Button label="Github" href={socialMedialinks.github} />
+				<Button label="CodinGame" href={socialMedialinks.github} />
 			</div>
 		</div>
 	);

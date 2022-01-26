@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$font: 'Open Sans', sans-serif;
+$primary: #6a95ff;
+$secondary: #2f3542;
+$accent: #fafafa;
+#material {
+	background-color: #f5f5f5;
+	text-align: left;
+	menu-icon {
+		margin-right: 2rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+	h3 {
+		font-weight: 300;
+		font-size: 1.75rem;
+	}
+
+	.first-grid-content {
+		max-width: 760px;
+		margin: auto;
+	}
+
+	.title-intro-container {
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+	}
+
+	.what-i-was-doing {
+		margin-bottom: 3rem;
+	}
+
+	.technologies-container {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.technologie-card {
+		height: 100%;
+		li {
+			text-align: left;
+			margin-left: 1.5rem;
+		}
+	}
+
+	.social-media-links {
+		padding-bottom: 3rem;
+		margin-top: 1rem;
+		a {
+			margin: 0 1rem;
+			text-transform: inherit;
+		}
+
+		.logo-social-media-link {
+			width: 16px;
+			margin-right: 8px;
+		}
+	}
+
+	.history-of-web-design {
+		margin: 5rem 2.5rem;
+		padding: 2rem;
+		text-align: left;
+		background: #dddddd;
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
