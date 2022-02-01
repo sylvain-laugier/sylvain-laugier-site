@@ -9,7 +9,7 @@ import { MaterialLayout } from '../components/material';
 
 // markup
 const IndexPage = () => {
-	const [designEra, setDesignEra] = useState<DesignEras>(designEras.material);
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.flatDesign);
 	return (
 		<main className="App">
 			<title>Home Page</title>

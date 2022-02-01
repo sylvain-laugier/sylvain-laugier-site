@@ -1,30 +1,211 @@
+$font: 'Open Sans', sans-serif;
+$primary: #6a95ff;
+$secondary: #2f3542;
+$accent: #fafafa;
 #flat-design {
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font;
 	.home {
-		background-color: #3498db;
-		color: white;
+		color: $accent;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		background-color: $accent;
 	}
 
 	.year-list-container {
-		color: #3498db;
-		background: white;
+		color: $accent;
 		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		z-index: 2;
+		max-width: initial;
+		border-bottom: 1px solid $accent;
 
 		.year-link {
 			border-right: none;
+			padding: 0 1rem;
+			font-weight: 100;
+
+			&:hover {
+				font-weight: bold;
+			}
+		}
+		.year-link-selected {
+			font-weight: bold;
 		}
 	}
 
-	.year-link-selected {
-		font-weight: bold;
+	.background-image-flat {
+		background-image: url('../../images/stock-overworking.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+
+		position: absolute;
+
+		&:after {
+			content: '';
+			background: rgba(0, 0, 0, 0.5);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	.content-container {
+		margin: auto;
+		max-width: 1440px;
+		width: 100%;
+	}
+
+	.background {
+		display: flex;
+	}
+
+	.background-primary {
+		background: $primary;
+	}
+
+	.background-accent {
+		background: $accent;
+	}
+
+	.title-intro-container {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		z-index: 1;
+
+		h1 {
+			text-transform: uppercase;
+			font-size: 70px;
+			letter-spacing: 8px;
+			font-weight: 300;
+		}
+
+		h2 {
+			font-size: 40px;
+			letter-spacing: 2px;
+		}
+	}
+
+	p {
+		font-size: 20px;
 	}
 
 	h2 {
-		font-weight: 300;
+		font-weight: 600;
+		font-size: 3rem;
+		letter-spacing: 1px;
 	}
 
-	.separator {
-		border-color: white;
-		border-width: 2px;
+	.what-i-was-doing-container {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 50px;
+		padding-top: 50px;
+
+		.top-line {
+			border-top: 12px solid $accent;
+			width: 67%;
+		}
+
+		.what-i-was-doing {
+			text-align: left;
+			max-width: 640px;
+			color: $accent;
+			margin-top: -1rem;
+		}
+
+		img {
+			width: 100%;
+			max-width: 800px;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.technologies {
+		width: 100%;
+		color: $secondary;
+
+		.technologies-list {
+			display: flex;
+			justify-content: space-between;
+			max-width: 960px;
+			margin: auto;
+			.technologie-section {
+				min-width: 300px;
+
+				h3 {
+					font-size: 1.75rem;
+					font-weight: 400;
+				}
+
+				ul {
+					list-style-type: none;
+					padding: 1rem;
+
+					li {
+						font-weight: bold;
+						padding: 0.15rem 0;
+					}
+				}
+			}
+		}
+	}
+
+	.social-media-container {
+		color: $secondary;
+		width: 100%;
+
+		.social-media-links {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: 2rem;
+			margin: auto;
+			max-width: 960px;
+			.button {
+				height: 100px;
+				a {
+					width: 100%;
+					height: 100%;
+					font-size: 1.5rem;
+					text-decoration: none;
+					color: $accent;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			.linkedin {
+				background-color: #0e76a8;
+			}
+			.github {
+				background-color: #171515;
+			}
+			.codingame {
+				background-color: #fcd207;
+			}
+		}
+	}
+
+	.history-of-web-design {
+		background-color: $primary;
+		max-width: 960px;
+		margin: 3rem auto;
+		padding: 1rem 0;
+		font-style: italic;
+
+		p {
+			padding: 0 5rem;
+		}
 	}
 }

@@ -53,6 +53,11 @@ $accent: #fafafa;
 		a {
 			margin: 0 1rem;
 			text-transform: inherit;
+			background-color: #fff;
+
+			&:first-child {
+				margin-left: 0;
+			}
 		}
 
 		.logo-social-media-link {

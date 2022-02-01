@@ -41,7 +41,7 @@ export function MaterialLayout() {
 					</Container>
 					<Container>
 						<Typography variant="h2">
-							Les technos avec lesquelles j'ai travaillé :
+							Les technos avec lesquelles j'ai travaillé
 						</Typography>
 						<Grid container className="technologies-container" spacing={3}>
 							<Grid item xs={4}>
