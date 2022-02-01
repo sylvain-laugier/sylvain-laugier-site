@@ -6,6 +6,7 @@ import { NoughtiesLayout } from '../components/noughties';
 import { FlatDesignLayout } from '../components/flat';
 import { SkeuomorphicLayout } from '../components/skeuemorphic';
 import { MaterialLayout } from '../components/material';
+import BrutalismLayout from '../components/brutalism/BrutalismLayout';
 
 // markup
 const IndexPage = () => {
@@ -16,7 +17,7 @@ const IndexPage = () => {
 
 			<div className="div-id" id={designEra}>
 				<div className="home">
-					<YearList designEra={designEra} setDesignEra={setDesignEra} />
+					<YearList currentDesignEra={designEra} setDesignEra={setDesignEra} />
 					{getYearLayoutComponent(designEra)}
 				</div>
 			</div>
@@ -36,6 +37,8 @@ function getYearLayoutComponent(designEra: DesignEras) {
 			return <SkeuomorphicLayout />;
 		case designEras.material:
 			return <MaterialLayout />;
+		case designEras.brutalism:
+			return <BrutalismLayout />;
 	}
 }
 

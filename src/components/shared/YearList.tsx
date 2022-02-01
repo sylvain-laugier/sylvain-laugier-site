@@ -10,12 +10,15 @@ import YearLink from './YearLink';
 
 interface YearListProps {
 	setDesignEra: SetState<DesignEras>;
-	designEra: DesignEras;
+	currentDesignEra: DesignEras;
 }
 
 const MaterialTabStyle = { fontSize: '1.5rem' };
-export default function YearList({ setDesignEra, designEra }: YearListProps) {
-	if (designEra === designEras.material) {
+export default function YearList({
+	setDesignEra,
+	currentDesignEra,
+}: YearListProps) {
+	if (currentDesignEra === designEras.material) {
 		return (
 			<AppBar position="fixed">
 				<Tabs
@@ -23,31 +26,13 @@ export default function YearList({ setDesignEra, designEra }: YearListProps) {
 					onChange={(e, value) => setDesignEra(value)}
 					centered
 				>
-					<Tab
-						label={designEraToYearMap[designEras.nineties]}
-						value={designEras.nineties}
-						style={MaterialTabStyle}
-					/>
-					<Tab
-						label={designEraToYearMap[designEras.noughties]}
-						value={designEras.noughties}
-						style={MaterialTabStyle}
-					/>
-					<Tab
-						label={designEraToYearMap[designEras.skeuomorphic]}
-						value={designEras.skeuomorphic}
-						style={MaterialTabStyle}
-					/>
-					<Tab
-						label={designEraToYearMap[designEras.flatDesign]}
-						value={designEras.flatDesign}
-						style={MaterialTabStyle}
-					/>
-					<Tab
-						label={designEraToYearMap[designEras.material]}
-						value={designEras.material}
-						style={MaterialTabStyle}
-					/>
+					{Object.values(designEras).map(designEra => (
+						<Tab
+							label={designEraToYearMap[designEra]}
+							value={designEra}
+							style={MaterialTabStyle}
+						/>
+					))}
 				</Tabs>
 			</AppBar>
 		);
@@ -55,41 +40,15 @@ export default function YearList({ setDesignEra, designEra }: YearListProps) {
 
 	return (
 		<div className="year-list-container">
-			<YearLink
-				setDesignEra={setDesignEra}
-				designEra={designEras.nineties}
-				selected={designEras.nineties === designEra}
-			>
-				{designEraToYearMap[designEras.nineties]}
-			</YearLink>
-			<YearLink
-				setDesignEra={setDesignEra}
-				designEra={designEras.noughties}
-				selected={designEras.noughties === designEra}
-			>
-				{designEraToYearMap[designEras.noughties]}
-			</YearLink>
-			<YearLink
-				setDesignEra={setDesignEra}
-				designEra={designEras.skeuomorphic}
-				selected={designEras.skeuomorphic === designEra}
-			>
-				{designEraToYearMap[designEras.skeuomorphic]}
-			</YearLink>
-			<YearLink
-				setDesignEra={setDesignEra}
-				designEra={designEras.flatDesign}
-				selected={designEras.flatDesign === designEra}
-			>
-				{designEraToYearMap[designEras.flatDesign]}
-			</YearLink>
-			<YearLink
-				setDesignEra={setDesignEra}
-				designEra={designEras.material}
-				selected={false}
-			>
-				{designEraToYearMap[designEras.material]}
-			</YearLink>
+			{Object.values(designEras).map(designEra => (
+				<YearLink
+					setDesignEra={setDesignEra}
+					designEra={designEra}
+					selected={designEra === currentDesignEra}
+				>
+					{designEraToYearMap[designEra]}
+				</YearLink>
+			))}
 		</div>
 	);
 }
