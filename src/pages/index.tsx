@@ -10,7 +10,7 @@ import BrutalismLayout from '../components/brutalism/BrutalismLayout';
 
 // markup
 const IndexPage = () => {
-	const [designEra, setDesignEra] = useState<DesignEras>(designEras.flatDesign);
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.brutalism);
 	return (
 		<main className="App">
 			<title>Home Page</title>
