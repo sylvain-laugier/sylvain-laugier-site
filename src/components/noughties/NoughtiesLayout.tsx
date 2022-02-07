@@ -34,7 +34,7 @@ export function NoughtiesLayout() {
 					<HistoryOfWebDesign designEra={designEras.noughties} />
 				</div>
 			</div>
-			<SocialMediaLinks designEra={designEras.noughties} />
+			<SocialMediaLinks />
 		</div>
 	);
 }

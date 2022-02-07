@@ -4,7 +4,8 @@ nineties: 'nineties',
   skeuomorphic: 'skeuomorphic',
   flatDesign: 'flat-design',
   material: 'material',
-  brutalism: 'brutalism'
+  brutalism: 'brutalism',
+  now: 'now'
 } as const;
 
 
@@ -17,7 +18,8 @@ export const designEraToYearMap: DesignEraMap = {
 	[designEras.skeuomorphic]: '2009',
 	[designEras.flatDesign]: '2012',
   [designEras.material]: '2015',
-  [designEras.brutalism]: '2018'
+  [designEras.brutalism]: '2018',
+  [designEras.now]: '2022',
 }
 
 export type SetState<T> =React.Dispatch<React.SetStateAction<T>>

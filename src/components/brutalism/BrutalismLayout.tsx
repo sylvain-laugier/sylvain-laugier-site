@@ -6,7 +6,7 @@ import SocialMediaLinks from '../shared/SocialMediaLinks';
 import Technologies from '../shared/Technologies';
 import WhatIWasDoing from '../shared/WhatIWasDoing';
 
-function BrutalismLayout() {
+export function BrutalismLayout() {
 	return (
 		<>
 			<div className="title-intro-container">
@@ -25,13 +25,11 @@ function BrutalismLayout() {
 			<WhatIWasDoing designEra={designEras.brutalism} />
 			<div className="separator"></div>
 
-			<Technologies designEra={designEras.brutalism} />
+			<Technologies mode="grouped" />
 			<div className="separator" style={{ marginBottom: 0 }}></div>
-			<SocialMediaLinks designEra={designEras.brutalism} />
+			<SocialMediaLinks />
 			<div className="separator" style={{ marginTop: 0 }}></div>
 			<HistoryOfWebDesign designEra={designEras.brutalism} />
 		</>
 	);
 }
-
-export default BrutalismLayout;

@@ -6,26 +6,31 @@ import { NoughtiesLayout } from '../components/noughties';
 import { FlatDesignLayout } from '../components/flat';
 import { SkeuomorphicLayout } from '../components/skeuemorphic';
 import { MaterialLayout } from '../components/material';
-import BrutalismLayout from '../components/brutalism/BrutalismLayout';
+import { BrutalismLayout } from '../components/brutalism/BrutalismLayout';
+import { NowLayout } from '../components/now/NowLayout';
 
-// markup
 const IndexPage = () => {
-	const [designEra, setDesignEra] = useState<DesignEras>(designEras.brutalism);
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.now);
 	return (
 		<main className="App">
 			<title>Home Page</title>
 
 			<div className="div-id" id={designEra}>
 				<div className="home">
-					<YearList currentDesignEra={designEra} setDesignEra={setDesignEra} />
-					{getYearLayoutComponent(designEra)}
+					{designEra !== designEras.now && (
+						<YearList
+							currentDesignEra={designEra}
+							setDesignEra={setDesignEra}
+						/>
+					)}
+					{getYearLayoutComponent(designEra, setDesignEra)}
 				</div>
 			</div>
 		</main>
 	);
 };
 
-function getYearLayoutComponent(designEra: DesignEras) {
+function getYearLayoutComponent(designEra: DesignEras, setDesignEra) {
 	switch (designEra) {
 		case designEras.nineties:
 			return <NinetiesLayout />;
@@ -39,6 +44,8 @@ function getYearLayoutComponent(designEra: DesignEras) {
 			return <MaterialLayout />;
 		case designEras.brutalism:
 			return <BrutalismLayout />;
+		case designEras.now:
+			return <NowLayout setDesignEra={setDesignEra} />;
 	}
 }
 

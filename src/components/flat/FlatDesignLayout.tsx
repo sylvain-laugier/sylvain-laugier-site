@@ -9,6 +9,7 @@ import MountainImage from '../../images/mountain.svg';
 import FlatLogoFrontEnd from '../../images/flat-logo-front-end.png';
 import FlatLogoBackEnd from '../../images/flat-logo-back-end.png';
 import FlatLogoDevops from '../../images/flat-logo-devops.png';
+import Technologies from '../shared/Technologies';
 
 export function FlatDesignLayout() {
 	return (
@@ -34,50 +35,13 @@ export function FlatDesignLayout() {
 			</div>
 			<div className="background background-accent">
 				<div className="content-container">
-					<div className="technologies">
-						<h2>Les technos avec lesquelles j'ai travaillé </h2>
-
-						<div className="technologies-list">
-							<div className="technologie-section">
-								<h3>Front-End</h3>
-								<img src={FlatLogoFrontEnd}></img>
-								<ul>
-									<li> React</li>
-									<li> Typescript</li>
-									<li> Angular</li>
-									<li> RxJs</li>
-									<li> Gatsby</li>
-									<li> NextJs</li>
-									<li> Redux</li>
-									<li> MobX</li>
-								</ul>
-							</div>
-							<div className="technologie-section">
-								<h3>Back-end</h3>
-								<img src={FlatLogoBackEnd}></img>
-								<ul>
-									<li> NodeJs</li>
-									<li> MongoDB</li>
-									<li> Neo4j</li>
-									<li> Express</li>
-									<li> NestJs</li>
-									<li> Python</li>
-								</ul>
-							</div>
-							<div className="technologie-section">
-								<h3>Devops</h3>
-								<img src={FlatLogoDevops}></img>
-								<ul>
-									<li> AWS</li>
-									<li> GCP</li>
-									<li> Netlify</li>
-									<li> Heroku</li>
-									<li> Docker</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<SocialMediaLinks designEra={designEras.flatDesign} />
+					<Technologies
+						mode="grouped"
+						frontLogo={FlatLogoFrontEnd}
+						backLogo={FlatLogoBackEnd}
+						devOpsLogo={FlatLogoDevops}
+					/>
+					<SocialMediaLinks />
 				</div>
 			</div>
 			<HistoryOfWebDesign designEra={designEras.flatDesign} />

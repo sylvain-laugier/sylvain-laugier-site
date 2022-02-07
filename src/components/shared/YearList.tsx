@@ -39,16 +39,24 @@ export default function YearList({
 	}
 
 	return (
-		<div className="year-list-container">
-			{Object.values(designEras).map(designEra => (
-				<YearLink
-					setDesignEra={setDesignEra}
-					designEra={designEra}
-					selected={designEra === currentDesignEra}
-				>
-					{designEraToYearMap[designEra]}
-				</YearLink>
-			))}
+		<div className="year-list-content-container">
+			{currentDesignEra === designEras.now && (
+				<>
+					<h2>Ce site dispose d'une machine à voyager dans le temps !</h2>
+					<p>Choissisez votre destination !</p>
+				</>
+			)}
+			<div className="year-list-container">
+				{Object.values(designEras).map(designEra => (
+					<YearLink
+						setDesignEra={setDesignEra}
+						designEra={designEra}
+						selected={designEra === currentDesignEra}
+					>
+						{designEraToYearMap[designEra]}
+					</YearLink>
+				))}
+			</div>
 		</div>
 	);
 }

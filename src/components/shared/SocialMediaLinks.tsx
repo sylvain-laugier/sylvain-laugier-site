@@ -1,12 +1,12 @@
 import React from 'react';
-import { designEras, DesignEras } from '../../utils/constants';
 import Button from './Button';
 import LinkedInNinetiesButton from '../../images/button_nineties_linkedin.png';
 import GitHubNinetiesButton from '../../images/button_nineties_github.png';
 import CodinGameNinetiesButton from '../../images/button_nineties_codingame.png';
 
+type Mode = 'nineties';
 interface SocialMediaLinksProps {
-	designEra: DesignEras;
+	mode?: Mode;
 }
 
 export const socialMedialinks = {
@@ -15,8 +15,8 @@ export const socialMedialinks = {
 	codinGame: 'https://www.codingame.com/',
 } as const;
 
-export default function SocialMediaLinks({ designEra }: SocialMediaLinksProps) {
-	if (designEra === designEras.nineties) {
+export default function SocialMediaLinks({ mode }: SocialMediaLinksProps) {
+	if (mode === 'nineties') {
 		return (
 			<div className="social-media-container">
 				<h2>Retrouvez moi sur :</h2>

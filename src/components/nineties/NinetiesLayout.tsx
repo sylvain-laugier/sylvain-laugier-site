@@ -17,7 +17,7 @@ export function NinetiesLayout() {
 			<div className="separator"></div>
 			<Technologies />
 
-			<SocialMediaLinks designEra={designEras.nineties} />
+			<SocialMediaLinks mode="nineties" />
 			<HistoryOfWebDesign designEra={designEras.nineties} />
 		</>
 	);
