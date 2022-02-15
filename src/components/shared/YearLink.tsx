@@ -5,16 +5,19 @@ interface YearLinkProps {
 	designEra: DesignEras;
 	setDesignEra: SetState<DesignEras>;
 	selected: boolean;
+	id: string;
 }
 export default function YearLink({
 	designEra,
 	setDesignEra,
 	selected,
 	children,
+	id
 }: PropsWithChildren<YearLinkProps>) {
 	return (
 		<div
 			className={`year-link ${selected ? 'year-link-selected' : ''}`}
+			id={id}
 			onClick={() => {
 				topFunction();
 				setDesignEra(designEra);

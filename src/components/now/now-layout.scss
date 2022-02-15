@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
-
 $exo: 'Exo', sans-serif;
 $primary: #f45b49;
 $white-background: #fef7f1;
@@ -120,6 +118,10 @@ $accent: #fbdec6;
 			text-align: center;
 			border: none;
 			border-top: 1px solid black;
+
+			.year-link {
+				min-height: 44px;
+			}
 		}
 	}
 	.technologies {
@@ -197,5 +199,29 @@ $accent: #fbdec6;
 				}
 			}
 		}
+	}
+	#year-link-nineties:hover {
+		font-size: 31px;
+	}
+	#year-link-noughties:hover {
+		margin-bottom: -0.25rem;
+		font-size: 1.6rem;
+		padding: 0.25rem 1rem 0 1rem;
+	}
+	#year-link-flat-design:hover {
+		padding-right: 0.4rem;
+	}
+	#year-link-material:hover {
+		min-height: 42px;
+		padding-right: 0.4rem;
+	}
+	#year-link-brutalism:hover {
+		padding: 0.25rem 0.25rem 0 0.4rem;
+		font-size: 1.75rem;
+		min-height: initial;
+	}
+	#year-link-now:hover {
+		color: inherit;
+		cursor: default;
 	}
 }

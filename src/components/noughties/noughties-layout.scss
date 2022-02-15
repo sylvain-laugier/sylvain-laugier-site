@@ -23,10 +23,18 @@ $border: 1px solid $light-blue;
 		padding: 6px 0;
 		text-align: center;
 		font-size: 20px;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	.year-link-selected {
 		background: $grey-bg;
+
+		&:hover {
+			cursor: default;
+		}
 	}
 
 	.noughties-content-container {
@@ -133,5 +141,30 @@ $border: 1px solid $light-blue;
 			justify-content: space-around;
 			margin-left: 12px;
 		}
+	}
+
+	#year-link-nineties:hover {
+		padding: 0;
+	}
+	#year-link-flat-design:hover {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#year-link-material:hover {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#year-link-brutalism:hover {
+		border: none;
+	}
+	#year-link-now:hover {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

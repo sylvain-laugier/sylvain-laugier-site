@@ -1,33 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-@font-face {
-	font-family: 'unb-office';
-	src: url('../../fonts/unb-office_regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'unb-office';
-	src: url('../../fonts/unb-office_italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'unb-office';
-	src: url('../../fonts/unb-office_bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'unb-office';
-	src: url('../../fonts/unb-office_bold-italic.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
-}
-
 $unb-office: 'unb-office', sans-serif;
 $courier: 'Courier Prime', monospace;
 $alfa: 'Alfa Slab One', cursive;
@@ -296,5 +266,30 @@ $translate-start: 107.5%;
 			margin-left: auto;
 			text-align: right;
 		}
+	}
+	#year-link-nineties:hover {
+		font-size: 1.3rem;
+		padding: 0.4rem 0.3rem;
+	}
+	#year-link-noughties:hover {
+		padding: 0.5rem 0.25rem;
+		font-size: 1.4rem;
+	}
+	#year-link-flat-design:hover {
+		padding: 0.1rem 0.1rem 0.5rem 0.1rem;
+	}
+	#year-link-material:hover {
+		padding: 0.2rem 0.1rem 0.5rem 0.1rem;
+		border-width: 3px;
+	}
+	#year-link-brutalism:hover {
+		border-top: none;
+		border-bottom: none;
+		cursor: default;
+	}
+
+	#year-link-now:hover {
+		font-size: 1.25rem;
+		padding: 0.5rem 0.4rem;
 	}
 }

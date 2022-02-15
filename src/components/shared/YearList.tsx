@@ -13,7 +13,6 @@ interface YearListProps {
 	currentDesignEra: DesignEras;
 }
 
-const MaterialTabStyle = { fontSize: '1.5rem' };
 export default function YearList({
 	setDesignEra,
 	currentDesignEra,
@@ -30,7 +29,7 @@ export default function YearList({
 						<Tab
 							label={designEraToYearMap[designEra]}
 							value={designEra}
-							style={MaterialTabStyle}
+							id={`year-link-${designEra}`}
 						/>
 					))}
 				</Tabs>
@@ -52,6 +51,7 @@ export default function YearList({
 						setDesignEra={setDesignEra}
 						designEra={designEra}
 						selected={designEra === currentDesignEra}
+						id={`year-link-${designEra}`}
 					>
 						{designEraToYearMap[designEra]}
 					</YearLink>

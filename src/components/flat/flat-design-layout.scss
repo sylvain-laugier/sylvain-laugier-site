@@ -26,13 +26,12 @@ $accent: #fafafa;
 			border-right: none;
 			padding: 0 1rem;
 			font-weight: 100;
-
-			&:hover {
-				font-weight: bold;
-			}
 		}
 		.year-link-selected {
 			font-weight: bold;
+			&:hover {
+				cursor: default;
+			}
 		}
 	}
 
@@ -207,5 +206,36 @@ $accent: #fafafa;
 		p {
 			padding: 0 5rem;
 		}
+	}
+
+	#year-link-nineties:hover {
+		font-size: 1.85rem;
+		padding: 0 1.2rem;
+	}
+	#year-link-noughties:hover {
+		padding: 0 1.5rem;
+		font-size: 1.6rem;
+		display: flex;
+		align-items: center;
+	}
+	#year-link-flat-design:hover {
+		background: initial;
+		cursor: default;
+	}
+	#year-link-material:hover {
+		transition: padding 300ms ease-in-out;
+		font-weight: bold;
+		margin-bottom: -17px;
+		padding-top: 0.5rem;
+	}
+	#year-link-brutalism:hover {
+		margin-bottom: -1rem;
+		padding: 0.75rem 0.85rem 0 0.85rem;
+		border-bottom: none;
+	}
+	#year-link-now:hover {
+		margin-bottom: -1rem;
+		transition: padding 300ms ease-in-out;
+		padding: 0.75rem 1rem 0 1rem;
 	}
 }
