@@ -17,6 +17,14 @@ $accent: #fafafa;
 		font-size: 1.75rem;
 	}
 
+	.MuiTabs-root {
+		width: 100vw;
+	}
+
+	.app-loading .MuiAppBar-positionFixed {
+		position: relative;
+	}
+
 	.MuiTab-root {
 		font-size: 1.5rem;
 	}

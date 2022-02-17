@@ -12,6 +12,11 @@ $accent: #fafafa;
 		background-color: $accent;
 	}
 
+	.year-list-content-container {
+		width: 100vw;
+		position: absolute;
+	}
+
 	.year-list-container {
 		color: $accent;
 		border: none;

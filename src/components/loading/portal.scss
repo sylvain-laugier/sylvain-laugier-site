@@ -1,0 +1,265 @@
+.halo {
+	box-shadow: 0 0 20px 10px #fff, 0 0 50px 15px rgb(109, 24, 230),
+		0 0 70px 20px rgb(171, 134, 230);
+	background: white;
+	height: 100%;
+	position: absolute;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+.particule-container .halo {
+	width: 75px;
+	border-top-left-radius: 25%;
+	border-bottom-left-radius: 25%;
+	animation: wobble 500ms 2s ease-in infinite, scale-up-for-halo 2s ease-out;
+	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.explosion-container .halo {
+	width: 100%;
+	opacity: 0;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	animation: scale-up 2s 3s ease-out;
+	z-index: 12;
+}
+
+.lightning-image {
+	background: url('https://www.transparentpng.com/thumb/lightning/lightning-png-images-1.png');
+	width: 393px;
+	height: 421px;
+	position: absolute;
+	left: -159px;
+	animation: flash 3s linear infinite;
+	opacity: 0;
+}
+
+.lightning-flash {
+	box-shadow: 0 0 178px 192px rgb(253 141 255 / 25%);
+	width: 1px;
+	height: 1px;
+	left: -159px;
+	border-radius: 50%;
+	animation: flash 3s linear infinite;
+	opacity: 0;
+	top: 50%;
+	position: relative;
+	left: 50%;
+}
+
+.explosion-container .lightning-image {
+	left: initial;
+	z-index: 15;
+	animation-delay: 2s;
+}
+
+.explosion-container .lightning-flash {
+	z-index: 15;
+	animation-delay: 2s;
+}
+
+.explosion-container .particule {
+	z-index: 20;
+}
+
+.particule {
+	position: absolute;
+	opacity: 0;
+	border-radius: 50%;
+	background: white;
+	box-shadow: 0 0 12px 3px rgb(232 160 241 / 90%),
+		0 0 16px 16px rgb(109 24 230 / 50%);
+}
+
+@for $i from 1 through 15 {
+	.particule:nth-child(#{$i}) {
+		$size: random(5) + px;
+		height: $size;
+		width: $size;
+		$reversed: random() > 0.5;
+		@if $reversed {
+			animation: sparkle-reversed 0.75s ease-in infinite;
+		} @else {
+			animation: sparkle 0.75s ease-in infinite;
+		}
+		animation-delay: (random() * 5s) + 1s;
+		transform-origin: 0 (random() * 200)+100px;
+		top: random() * 75%;
+	}
+	.explosion-container .particule:nth-child(#{$i}) {
+		animation-delay: (random() * 5s) + 2s;
+	}
+}
+
+@keyframes scale-up-for-halo {
+	0% {
+		transform: scale(0.1) skew(0deg);
+		height: 75px;
+		top: 50%;
+	}
+	10% {
+		transform: scale(0.2) skew(25deg);
+	}
+	20% {
+		transform: scale(0.3);
+	}
+	30% {
+		transform: scale(0.4);
+	}
+	40% {
+		transform: scale(0.5) skew(5deg);
+	}
+	50% {
+		transform: scale(0.6);
+	}
+	60% {
+		transform: scale(0.7);
+	}
+	70% {
+		transform: scale(0.8) skew(-27deg);
+	}
+	80% {
+		transform: scale(0.9);
+	}
+	90% {
+		transform: scale(1) skew(13deg);
+		height: 75px;
+		top: 50%;
+	}
+	100% {
+		transform: scale(1);
+		height: 100%;
+		top: 0%;
+	}
+}
+
+@keyframes scale-up {
+	0% {
+		transform: scale(0.1) skew(0deg);
+		opacity: 1;
+	}
+	10% {
+		transform: scale(0.2) skew(25deg);
+	}
+	20% {
+		transform: scale(0.3);
+	}
+	30% {
+		transform: scale(0.4);
+	}
+	40% {
+		transform: scale(0.5) skew(5deg);
+	}
+	50% {
+		transform: scale(0.6);
+	}
+	60% {
+		transform: scale(0.7);
+	}
+	70% {
+		transform: scale(0.8) skew(-27deg);
+	}
+	80% {
+		transform: scale(0.9);
+	}
+	90% {
+		transform: scale(1) skew(13deg);
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	22% {
+		opacity: 1;
+	}
+	24% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	32% {
+		opacity: 1;
+	}
+	34% {
+		opacity: 0;
+	}
+	65% {
+		opacity: 0;
+	}
+	67% {
+		opacity: 1;
+	}
+	69% {
+		opacity: 0;
+	}
+}
+
+@keyframes wobble {
+	0% {
+		transform: scale(1) skew(0deg);
+	}
+	20% {
+		transform: scale(0.95) skew(1.5deg);
+	}
+	45% {
+		transform: scale(1.075) skew(-0.5deg);
+	}
+	55% {
+		transform: scale(1.025) skew(-1deg);
+	}
+	70% {
+		transform: scale(0.975) skew(1.5deg);
+	}
+	90% {
+		transform: scale(1.025) skew(0.5deg);
+	}
+	100% {
+		transform: scale(1) skew(0deg);
+	}
+}
+
+@keyframes sparkle {
+	25% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.7;
+	}
+	100% {
+		transform: translate3d(0, 0, 0px) rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@keyframes sparkle-reversed {
+	25% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.7;
+	}
+	100% {
+		transform: translate3d(0, 0, 0px) rotate(90deg);
+		opacity: 0;
+	}
+}

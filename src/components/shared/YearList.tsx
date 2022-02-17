@@ -9,7 +9,7 @@ import {
 import YearLink from './YearLink';
 
 interface YearListProps {
-	setDesignEra: SetState<DesignEras>;
+	setDesignEra: (designEras) => void;
 	currentDesignEra: DesignEras;
 }
 

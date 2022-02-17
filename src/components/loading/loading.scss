@@ -1,30 +1,312 @@
+$height: 300px;
+$width: $height / 4;
+$light-color: #fbf48d;
+$horizon: 36vh;
+$strafe-duration: 2.5s;
+$shining-time: 3s;
+$car-width: 1080px;
+
+.loading-screen {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	top: 0;
+	left: 0;
+	display: none;
+	justify-content: center;
+	overflow: hidden;
+	z-index: 20;
+}
+
+.star-container {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: calc($horizon + $height);
+	.star {
+		width: 3px;
+		height: 3px;
+		background: #ffffba;
+		position: absolute;
+		transform: scale(0.5);
+
+		&:before {
+			content: '';
+			position: absolute;
+			right: calc(50% - 10px);
+			top: 1px;
+			height: 1px;
+			width: 20px;
+			background: linear-gradient(
+				-45deg,
+				rgba(0, 0, 0, 0),
+				#ffffba,
+				rgba(0, 0, 0, 0)
+			);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 10px);
+			right: 1px;
+			height: 20px;
+			width: 1px;
+			background: linear-gradient(
+				-45deg,
+				rgba(0, 0, 0, 0),
+				#ffffba,
+				rgba(0, 0, 0, 0)
+			);
+		}
+	}
+
+	@for $i from 1 through 30 {
+		.star:nth-child(#{$i}) {
+			top: percentage(random(70) / 100);
+			left: percentage(random(100) / 100);
+		}
+	}
+}
+
+.delorean-container {
+	position: absolute;
+	transform: scale(0.5);
+	z-index: 3;
+	top: $horizon * 1.15;
+	display: flex;
+}
+
+.svg-car-container {
+	animation: disappear 9.5s linear;
+	z-index: 10;
+}
+
+.delorean-shadow {
+	position: absolute;
+	width: 682px;
+	height: 82px;
+	box-shadow: -48px 45px 19px 23px black;
+	transform: skewX(222deg);
+	top: 315px;
+	left: 277px;
+	opacity: 0.35;
+}
+
+.svg-car {
+	position: relative;
+	width: $car-width;
+}
+
+.svg-car path {
+	stroke: #ddd;
+	fill: #333;
+	fill-opacity: 1;
+}
+
+.svg-opacity {
+	fill-opacity: 0 !important;
+}
+.wheel {
+	animation: rotate-wheel 0.4s linear infinite;
+}
+
+.particule-container {
+	position: relative;
+	height: 410px;
+	top: 50px;
+	right: 50px;
+	animation: disappear 10s linear;
+}
+
+.explosion-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	top: 20%;
+	animation: disappear 12s linear;
+	z-index: 15;
+}
+
+.background-container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: $horizon 0;
+	top: 0;
+	left: 0;
+}
+
+.parking-floor {
+	background: #333;
+	width: 100vw;
+	height: calc(100vh - $horizon - $height);
+	position: absolute;
+	top: calc($horizon + $height);
+	left: 0;
+}
+
+.parking-space {
+	position: absolute;
+	width: $height;
+	height: $height * 0.66;
+	top: $height;
+	z-index: 2;
+	border: 8px solid #ffcb00;
+	border-radius: 6px;
+	border-top-width: 4px;
+	border-bottom: none;
+	transform: skewX(35deg);
+	margin-top: 12px;
+	transform-origin: top;
+}
+
+.light {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: $height;
+	width: $width;
+	position: absolute;
+	z-index: 2;
+	animation: strafleft $strafe-duration linear infinite;
+}
+
+.lights {
+	height: 0.1 * $height;
+	width: 0.3 * $height;
+	position: absolute;
+	top: -0.05 * $height;
+	display: flex;
+	justify-content: space-between;
+}
+
+.light-ball {
+	$diamater: 0.14 * $height;
+	height: $diamater;
+	width: $diamater;
+	background: $light-color;
+	border-radius: 50%;
+	box-shadow: 0 0 20px 4px $light-color;
+}
+
+.part {
+	background: #888;
+	margin-bottom: -1px;
+}
+
+.higher-part {
+	width: 0.2 * $width;
+	height: 0.7 * $height;
+}
+
+.lower-part {
+	width: 0.4 * $width;
+	height: 0.275 * $height;
+}
+
+.part:after {
+	width: 50%;
+	content: '';
+	height: 100%;
+	background: #999999;
+	display: block;
+}
+
+.fondation {
+	background: #666;
+	width: 0.6 * $width;
+	height: 0.025 * $height;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+}
+
+.fondation:after {
+	width: 50%;
+	content: '';
+	height: 100%;
+	background: #777;
+	display: block;
+	border-top-left-radius: 50%;
+}
+
+.fondation-top {
+	width: 0.4 * $width;
+}
+
+$number-of-lights: 5;
+
+@for $i from 1 through $number-of-lights {
+	.light:nth-child(#{$i}) {
+		animation-delay: ((1 / $number-of-lights) * -$i) * $strafe-duration;
+	}
+}
+
+.light:nth-child(1) {
+	transform: translateX(-25vw);
+}
+
+@keyframes disappear {
+	0% {
+		opacity: 1;
+	}
+	48% {
+		opacity: 1;
+	}
+	52% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes start-wheel {
+	0% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(360deg);
+	}
+	60% {
+		transform: rotate(720deg);
+	}
+	80% {
+		transform: rotate(1080deg);
+	}
+	93% {
+		transform: rotate(1440deg);
+	}
+	100% {
+		transform: rotate(1800deg);
+	}
+}
+
 @keyframes rotate-wheel {
 	0% {
 		transform: rotate(0deg);
 	}
-	// 25% {
-	// 	transform: rotate(90deg);
-	// }
-	// 50% {
-	// 	transform: rotate(180deg);
-	// }
-	// 75% {
-	// 	transform: rotate(270deg);
-	// }
 	100% {
 		transform: rotate(360deg);
 	}
 }
 
-.svg-car {
-	position: relative;
-	top: -300px;
-}
+@keyframes strafleft {
+	0% {
+		opacity: 0;
+	}
+	0.01% {
+		transform: translateX(70vw);
+	}
+	0.02% {
+		opacity: 1;
+	}
 
-.svg-car path {
-	stroke: white;
-}
-
-.wheel {
-	animation: rotate-wheel 1s linear infinite;
+	100% {
+		transform: translateX(-70vw);
+	}
 }
