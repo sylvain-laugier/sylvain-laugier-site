@@ -1,5 +1,5 @@
 $height: 300px;
-$width: $height / 4;
+$width: calc($height / 4);
 $light-color: #fbf48d;
 $horizon: 36vh;
 $strafe-duration: 2.5s;
@@ -63,8 +63,8 @@ $car-width: 1080px;
 
 	@for $i from 1 through 30 {
 		.star:nth-child(#{$i}) {
-			top: percentage(random(70) / 100);
-			left: percentage(random(100) / 100);
+			top: percentage(calc(random(70) / 100));
+			left: percentage(calc(random(100) / 100));
 		}
 	}
 }
@@ -78,7 +78,7 @@ $car-width: 1080px;
 }
 
 .svg-car-container {
-	animation: disappear 9.5s linear;
+	animation: disappear 7.5s linear;
 	z-index: 10;
 }
 
@@ -116,7 +116,7 @@ $car-width: 1080px;
 	height: 410px;
 	top: 50px;
 	right: 50px;
-	animation: disappear 10s linear;
+	animation: disappear 8s linear;
 }
 
 .explosion-container {
@@ -126,7 +126,7 @@ $car-width: 1080px;
 	display: flex;
 	justify-content: center;
 	top: 20%;
-	animation: disappear 12s linear;
+	animation: disappear 10s linear;
 	z-index: 15;
 }
 
@@ -242,7 +242,7 @@ $number-of-lights: 5;
 
 @for $i from 1 through $number-of-lights {
 	.light:nth-child(#{$i}) {
-		animation-delay: ((1 / $number-of-lights) * -$i) * $strafe-duration;
+		animation-delay: (calc(1 / $number-of-lights) * -$i) * $strafe-duration;
 	}
 }
 
@@ -254,10 +254,10 @@ $number-of-lights: 5;
 	0% {
 		opacity: 1;
 	}
-	48% {
+	49.5% {
 		opacity: 1;
 	}
-	52% {
+	50.5% {
 		opacity: 0;
 	}
 	100% {
