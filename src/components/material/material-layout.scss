@@ -1,3 +1,4 @@
+@use '../../_breakpoints.scss';
 $primary: #6a95ff;
 $secondary: #2f3542;
 $accent: #fafafa;
@@ -21,10 +22,6 @@ $accent: #fafafa;
 		width: 100vw;
 	}
 
-	.app-loading .MuiAppBar-positionFixed {
-		position: relative;
-	}
-
 	.MuiTab-root {
 		font-size: 1.5rem;
 	}
@@ -32,6 +29,12 @@ $accent: #fafafa;
 	.first-grid-content {
 		max-width: 760px;
 		margin: auto;
+	}
+	.second-grid-content {
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			max-width: 760px;
+			margin: auto;
+		}
 	}
 
 	.title-intro-container {
@@ -83,6 +86,13 @@ $accent: #fafafa;
 
 		h2 {
 			margin-top: 0;
+		}
+
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			margin: 5rem 24px;
+		}
+		@media screen and (max-width: breakpoints.$tablet-up) {
+			margin: 5rem 16px;
 		}
 	}
 	#year-link-nineties:hover {

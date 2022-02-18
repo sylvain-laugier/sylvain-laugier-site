@@ -28,7 +28,7 @@ import CodinGameLogo from '../../images/codingame-logo.svg';
 export function MaterialLayout() {
 	return (
 		<Grid container>
-			<Grid item xs={8}>
+			<Grid item xs={12} md={8}>
 				<div className="first-grid-content">
 					<Container className="title-intro-container">
 						<Typography variant="h1">Sylvain Laugier</Typography>
@@ -121,8 +121,10 @@ export function MaterialLayout() {
 					</Container>
 				</div>
 			</Grid>
-			<Grid item xs={4}>
-				<HistoryOfWebDesign designEra={designEras.material} />
+			<Grid item xs={12} md={4}>
+				<div className="second-grid-content">
+					<HistoryOfWebDesign designEra={designEras.material} />
+				</div>
 			</Grid>
 		</Grid>
 	);

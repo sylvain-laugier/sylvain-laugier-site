@@ -1,3 +1,5 @@
+@use '../../_breakpoints.scss';
+
 $grey-bg: #eaeaea;
 $light-blue: #adc6ed;
 $sans-font: Arial, sans-serif;
@@ -6,6 +8,7 @@ $border: 1px solid $light-blue;
 #noughties {
 	font-family: $sans-font;
 	text-align: left;
+	padding-bottom: 2rem;
 
 	.year-list-container {
 		border: none;
@@ -22,7 +25,7 @@ $border: 1px solid $light-blue;
 		margin: 0 6px;
 		padding: 6px 0;
 		text-align: center;
-		font-size: 20px;
+		font-size: 1.25rem;
 
 		&:hover {
 			text-decoration: none;
@@ -46,16 +49,26 @@ $border: 1px solid $light-blue;
 	.colums-container {
 		display: flex;
 		justify-content: space-between;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			flex-direction: column;
+		}
 	}
 
 	.left-column {
 		width: 55%;
 		display: flex;
 		flex-direction: column;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			width: 100%;
+		}
 	}
 
 	.right-column {
 		width: 42.5%;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			width: 100%;
+			margin-top: 3rem;
+		}
 	}
 
 	h2 {

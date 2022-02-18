@@ -8,6 +8,7 @@
 
 	.year-list-container {
 		border-color: yellow;
+		flex-wrap: wrap;
 
 		.year-link {
 			border-color: yellow;
@@ -25,12 +26,13 @@
 
 	.home {
 		border: 8px solid grey;
-		max-width: 840px;
-		margin: auto;
+		max-width: 872px;
+		width: calc(100vw - 32px);
+		margin: 32px auto;
 		height: 100%;
 		padding: 16px;
-		margin-top: 32px;
 		background-color: black;
+		box-sizing: border-box;
 	}
 
 	.nth-visitor {
@@ -98,7 +100,7 @@
 		.technologies-list {
 			display: flex;
 			margin: auto;
-			width: 500px;
+			max-width: 500px;
 			flex-wrap: wrap;
 			justify-content: space-between;
 

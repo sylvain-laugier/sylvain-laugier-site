@@ -1,3 +1,5 @@
+@use '../../_breakpoints.scss';
+
 $font: 'Open Sans', sans-serif;
 $primary: #6a95ff;
 $secondary: #2f3542;
@@ -31,6 +33,10 @@ $accent: #fafafa;
 			border-right: none;
 			padding: 0 1rem;
 			font-weight: 100;
+
+			@media screen and (max-width: breakpoints.$tablet-up) {
+				font-size: 1.5rem;
+			}
 		}
 		.year-link-selected {
 			font-weight: bold;
@@ -63,7 +69,7 @@ $accent: #fafafa;
 	.content-container {
 		margin: auto;
 		max-width: 1440px;
-		width: 100%;
+		width: 95%;
 	}
 
 	.background {
@@ -89,19 +95,19 @@ $accent: #fafafa;
 
 		h1 {
 			text-transform: uppercase;
-			font-size: 70px;
+			font-size: 4.3rem;
 			letter-spacing: 8px;
 			font-weight: 300;
 		}
 
 		h2 {
-			font-size: 40px;
+			font-size: 2.5rem;
 			letter-spacing: 2px;
 		}
 	}
 
 	p {
-		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	h2 {
@@ -115,6 +121,9 @@ $accent: #fafafa;
 		grid-template-columns: 1fr 2fr;
 		grid-gap: 50px;
 		padding-top: 50px;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			display: block;
+		}
 
 		.top-line {
 			border-top: 12px solid $accent;
@@ -132,6 +141,9 @@ $accent: #fafafa;
 			width: 100%;
 			max-width: 800px;
 			margin-bottom: 1rem;
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				display: none;
+			}
 		}
 	}
 
@@ -144,6 +156,11 @@ $accent: #fafafa;
 			justify-content: space-between;
 			max-width: 960px;
 			margin: auto;
+
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				flex-direction: column;
+			}
+
 			.technologie-section {
 				min-width: 300px;
 
@@ -159,6 +176,7 @@ $accent: #fafafa;
 					li {
 						font-weight: bold;
 						padding: 0.15rem 0;
+						font-size: 1.2rem;
 					}
 				}
 			}
@@ -175,6 +193,15 @@ $accent: #fafafa;
 			column-gap: 2rem;
 			margin: auto;
 			max-width: 960px;
+
+			@media screen and (max-width: breakpoints.$tablet-up) {
+				display: flex;
+				flex-direction: column;
+
+				.button {
+					margin: 1rem 3rem;
+				}
+			}
 			.button {
 				height: 100px;
 				a {

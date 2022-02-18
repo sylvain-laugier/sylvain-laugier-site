@@ -10,15 +10,15 @@ import { NowLayout } from '../components/now/NowLayout';
 import Loading from '../components/loading/Loading';
 
 const IndexPage = () => {
-	const [designEra, setDesignEra] = useState<DesignEras>(designEras.now);
+	const [designEra, setDesignEra] = useState<DesignEras>(designEras.material);
 	const [loading, setLoading] = useState(false);
 
 	const changeDesignEra = useCallback((designEra: DesignEras) => {
-		setLoading(true);
+		// setLoading(true);
 		setTimeout(() => {
-			setLoading(false);
+			// setLoading(false);
 			setDesignEra(designEra);
-		}, 6000);
+		}, 0); // 6000
 	}, []);
 
 	return (
