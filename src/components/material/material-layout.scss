@@ -24,6 +24,14 @@ $accent: #fafafa;
 
 	.MuiTab-root {
 		font-size: 1.5rem;
+
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			min-width: 100px;
+		}
+		@media screen and (max-width: 580px) {
+			padding: 6px;
+			min-width: initial;
+		}
 	}
 
 	.first-grid-content {
@@ -53,6 +61,10 @@ $accent: #fafafa;
 
 	.technologie-card {
 		height: 100%;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			max-width: 280px;
+			margin: auto;
+		}
 		li {
 			text-align: left;
 			margin-left: 1.5rem;
@@ -62,6 +74,7 @@ $accent: #fafafa;
 	.social-media-links {
 		padding-bottom: 3rem;
 		margin-top: 1rem;
+		display: flex;
 		a {
 			margin: 0 1rem;
 			text-transform: inherit;

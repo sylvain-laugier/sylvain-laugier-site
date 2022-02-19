@@ -1,3 +1,5 @@
+@use '../../_breakpoints.scss';
+
 #nineties {
 	font-family: serif;
 	width: 100vw;
@@ -12,6 +14,13 @@
 
 		.year-link {
 			border-color: yellow;
+			@media screen and (max-width: breakpoints.$tablet-up) {
+				font-size: 1.5rem;
+				padding: 0 0.5rem;
+			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				font-size: 1.25rem;
+			}
 		}
 
 		.year-link-selected {
@@ -131,6 +140,10 @@
 				margin: 0px 12px;
 				display: flex;
 				align-items: center;
+
+				@media screen and (max-width: breakpoints.$phone-down) {
+					margin: 0px 3px;
+				}
 				img {
 					border: 2px solid black;
 				}

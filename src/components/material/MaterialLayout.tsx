@@ -44,7 +44,7 @@ export function MaterialLayout() {
 							Les technos avec lesquelles j'ai travaillé
 						</Typography>
 						<Grid container className="technologies-container" spacing={3}>
-							<Grid item xs={4}>
+							<Grid item sm={4} xs={12}>
 								<TechnologieCard
 									icon={<StorefrontIcon />}
 									title="Front-end"
@@ -60,7 +60,7 @@ export function MaterialLayout() {
 									]}
 								></TechnologieCard>
 							</Grid>
-							<Grid item xs={4}>
+							<Grid item sm={4} xs={12}>
 								<TechnologieCard
 									icon={<BusinessIcon />}
 									title="Back-end"
@@ -75,7 +75,7 @@ export function MaterialLayout() {
 									]}
 								></TechnologieCard>
 							</Grid>
-							<Grid item xs={4}>
+							<Grid item sm={4} xs={12}>
 								<TechnologieCard
 									icon={<DnsIcon />}
 									title="DevOps"

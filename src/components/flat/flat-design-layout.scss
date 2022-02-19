@@ -37,6 +37,9 @@ $accent: #fafafa;
 			@media screen and (max-width: breakpoints.$tablet-up) {
 				font-size: 1.5rem;
 			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				padding: 0 0.5rem;
+			}
 		}
 		.year-link-selected {
 			font-weight: bold;
@@ -92,6 +95,10 @@ $accent: #fafafa;
 		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 		z-index: 1;
+
+		@media screen and (max-width: breakpoints.$tablet-up) {
+			margin: 0 1rem;
+		}
 
 		h1 {
 			text-transform: uppercase;
