@@ -10,8 +10,8 @@ export default function Loading() {
 	return (
 		<div className="loading-screen">
 			<div className="star-container">
-				{starRange.map(() => (
-					<div className="star" />
+				{starRange.map((r, i) => (
+					<div className="star" key={i} />
 				))}
 			</div>
 			<div className="delorean-container">

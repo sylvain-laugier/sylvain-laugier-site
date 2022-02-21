@@ -77,6 +77,12 @@ $car-width: 1080px;
 	z-index: 3;
 	top: $horizon * 1.15;
 	display: flex;
+	@media screen and (max-width: breakpoints.$tablet-down) {
+		margin-left: -8rem;
+	}
+	@media screen and (max-width: breakpoints.$phone-down) {
+		transform: scale(0.375);
+	}
 }
 
 .svg-car-container {
@@ -141,6 +147,10 @@ $car-width: 1080px;
 	padding: $horizon 0;
 	top: 0;
 	left: 0;
+
+	@media screen and (max-width: breakpoints.$phone-down) {
+		padding: 30vh 0;
+	}
 }
 
 .parking-floor {
@@ -150,6 +160,10 @@ $car-width: 1080px;
 	position: absolute;
 	top: calc($horizon + $height);
 	left: 0;
+	@media screen and (max-width: breakpoints.$phone-down) {
+		top: calc(30vh + $height);
+		height: calc(70vh - $height);
+	}
 }
 
 .parking-space {

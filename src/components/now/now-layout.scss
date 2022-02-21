@@ -53,6 +53,9 @@ $accent: #fbdec6;
 		@media screen and (max-width: breakpoints.$desktop-down) {
 			margin: 1.5rem;
 		}
+		@media screen and (max-width: breakpoints.$phone-down) {
+			margin: 0.5rem;
+		}
 
 		.left-content {
 			width: 66%;
@@ -62,6 +65,9 @@ $accent: #fbdec6;
 			box-sizing: border-box;
 			@media screen and (max-width: breakpoints.$desktop-up) {
 				width: 100%;
+			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				padding: 1.5rem;
 			}
 		}
 
@@ -140,6 +146,14 @@ $accent: #fbdec6;
 					font-size: 1.5rem;
 					min-height: 2rem;
 				}
+
+				@media screen and (max-width: 380px) {
+					font-size: 1.25rem;
+					padding-top: 0.25rem;
+				}
+			}
+			.year-link-selected {
+				font-weight: bold;
 			}
 		}
 	}

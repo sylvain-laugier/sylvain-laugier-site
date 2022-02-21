@@ -30,6 +30,7 @@ export default function YearList({
 							label={designEraToYearMap[designEra]}
 							value={designEra}
 							id={`year-link-${designEra}`}
+							key={designEra}
 						/>
 					))}
 				</Tabs>
@@ -52,6 +53,7 @@ export default function YearList({
 						designEra={designEra}
 						selected={designEra === currentDesignEra}
 						id={`year-link-${designEra}`}
+						key={designEra}
 					>
 						{designEraToYearMap[designEra]}
 					</YearLink>

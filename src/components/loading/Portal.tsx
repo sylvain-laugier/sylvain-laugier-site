@@ -17,8 +17,8 @@ export function Portal({ explosion }: PortalInterface) {
 				<div className="lightning-image">
 					<div className="lightning-flash" />
 				</div>
-				{range.map(() => (
-					<div className="particule" />
+				{range.map((r, i) => (
+					<div className="particule" key={i} />
 				))}
 			</div>
 		</>

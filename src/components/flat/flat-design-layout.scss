@@ -92,7 +92,7 @@ $accent: #fafafa;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		font-family: 'Lato', sans-serif;
+		font-family: $font;
 		font-weight: 300;
 		z-index: 1;
 
@@ -118,7 +118,7 @@ $accent: #fafafa;
 	}
 
 	h2 {
-		font-weight: 600;
+		font-weight: 400;
 		font-size: 3rem;
 		letter-spacing: 1px;
 	}

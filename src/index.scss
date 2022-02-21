@@ -1,10 +1,5 @@
 @use '_breakpoints.scss';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
 	font-family: 'unb-office';
 	src: url('fonts/unb-office_regular.ttf') format('truetype');
@@ -31,6 +26,130 @@
 	src: url('fonts/unb-office_bold-italic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+	font-stretch: 100%;
+	src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+	font-stretch: 100%;
+	src: url('fonts/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	font-stretch: 100%;
+	font-display: swap;
+	font-stretch: 100%;
+	src: url('fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: bold;
+	font-stretch: 100%;
+	font-display: swap;
+	font-stretch: 100%;
+	src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Alfa Slab One';
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+
+	src: url('fonts/AlfaSlabOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Comic Sans MS';
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+
+	src: url('fonts/comic-sans-ms.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Courier Prime';
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+
+	src: url('fonts/CourierPrime-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Exo';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: 900;
+	src: url('fonts/Exo-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Exo';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: bold;
+	src: url('fonts/Exo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Exo';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: 400;
+	src: url('fonts/Exo-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: 300;
+	src: url('fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: 400;
+	src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	font-weight: 500;
+	src: url('fonts/Roboto-Medium.ttf') format('truetype');
 }
 
 body {
