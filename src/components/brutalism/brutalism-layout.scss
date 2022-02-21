@@ -1,6 +1,8 @@
+@use '../../_breakpoints.scss';
+
 $unb-office: 'unb-office', sans-serif;
 $courier: 'Courier Prime', monospace;
-$alfa: 'Alfa Slab One', cursive;
+$alfa: 'Alfa Slab One', serif;
 $primary: #05199c;
 $secondary: #ff200e;
 $tertiary: #4c9c14;
@@ -42,12 +44,16 @@ $translate-start: 107.5%;
 		padding-top: 2rem;
 		display: flex;
 		flex-direction: column;
+
+		@media screen and (max-width: breakpoints.$desktop-up) {
+			margin: 0 1rem;
+		}
 	}
 
 	h2 {
 		font-size: 3rem;
 		text-align: left;
-		padding-left: 3rem;
+		padding: 0 3rem;
 	}
 
 	.year-list-container {
@@ -120,10 +126,81 @@ $translate-start: 107.5%;
 		h2.title-animation span {
 			animation-delay: $animation-speed / 2;
 		}
+
+		@media screen and (max-width: 1620px) {
+			h2 {
+				font-size: 5rem;
+			}
+		}
+
+		@media screen and (max-width: breakpoints.$desktop-down) {
+			h1 {
+				font-size: 10vw;
+				top: 3rem;
+			}
+
+			h2 {
+				font-size: 4.25rem;
+				top: 12rem;
+			}
+		}
+
+		@media screen and (max-width: breakpoints.$desktop-up) {
+			h1 {
+				font-size: 11vw;
+				top: 2rem;
+			}
+			h2 {
+				top: 11rem;
+			}
+		}
+
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			h2 {
+				font-size: 3.75rem;
+				padding-left: 1rem;
+			}
+		}
+
+		@media screen and (max-width: breakpoints.$tablet-up) {
+			h1 {
+				top: 1rem;
+			}
+			h2 {
+				width: 93%;
+				white-space: normal;
+				padding-left: 3rem;
+				top: 8rem;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			h1 {
+				font-size: 10.5vw;
+			}
+		}
+
+		@media screen and (max-width: breakpoints.$phone-down) {
+			h1 {
+				font-size: 10vw;
+				top: 2rem;
+			}
+
+			h2 {
+				font-size: 2.5rem;
+				padding-left: 1rem;
+			}
+		}
 	}
 
 	.title-placeholder {
 		height: 20rem;
+
+		@media screen and (max-width: breakpoints.$desktop-down) {
+			height: 15rem;
+		}
+		@media screen and (max-width: breakpoints.$phone-down) {
+			height: 12.5rem;
+		}
 	}
 
 	.what-i-was-doing {
@@ -132,6 +209,16 @@ $translate-start: 107.5%;
 		color: $black;
 		text-transform: uppercase;
 		text-align: left;
+
+		@media screen and (max-width: breakpoints.$desktop-down) {
+			margin-left: 5%;
+		}
+
+		@media screen and (max-width: breakpoints.$desktop-up) {
+			width: 90%;
+			margin: auto;
+		}
+
 		h2 {
 			position: relative;
 			width: 300px;
@@ -140,6 +227,11 @@ $translate-start: 107.5%;
 			border: 5px solid $black;
 			padding: 0 0.5rem;
 			z-index: 2;
+
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				font-size: 1.75rem;
+				width: 250px;
+			}
 		}
 
 		p {
@@ -152,6 +244,19 @@ $translate-start: 107.5%;
 			top: -3rem;
 			left: 3rem;
 			padding: 1rem;
+
+			@media screen and (max-width: breakpoints.$desktop-up) {
+				width: 95%;
+			}
+
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				width: 85%;
+				font-size: 1rem;
+				top: -2.5rem;
+			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				width: 80%;
+			}
 		}
 	}
 
@@ -159,12 +264,28 @@ $translate-start: 107.5%;
 		display: flex;
 		justify-content: space-around;
 
+		@media screen and (max-width: breakpoints.$widescreen-up) {
+			justify-content: space-between;
+			margin: 0 3rem;
+		}
+		@media screen and (max-width: breakpoints.$tablet-up) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		.technologie-section {
 			width: 30%;
 			max-width: 300px;
 			position: relative;
 			padding: 1rem;
 			height: max-content;
+			@media screen and (max-width: breakpoints.$tablet-up) {
+				min-width: 320px;
+			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				min-width: 230px;
+				margin-left: 3rem;
+			}
 
 			.technologie-background {
 				position: absolute;
@@ -186,6 +307,13 @@ $translate-start: 107.5%;
 				z-index: 1;
 				position: relative;
 				margin-bottom: 0;
+				@media screen and (max-width: breakpoints.$tablet-down) {
+					padding: 0 1rem;
+					margin-left: 2rem;
+				}
+				@media screen and (max-width: breakpoints.$tablet-up) {
+					margin-left: 0;
+				}
 			}
 			ul {
 				margin-top: 0.5rem;
@@ -196,6 +324,12 @@ $translate-start: 107.5%;
 				font-size: 1.25rem;
 				left: 2.25rem;
 				line-height: 1.75rem;
+				@media screen and (max-width: breakpoints.$tablet-down) {
+					left: 1.5rem;
+				}
+				@media screen and (max-width: breakpoints.$tablet-up) {
+					left: 3rem;
+				}
 			}
 		}
 	}
@@ -207,29 +341,50 @@ $translate-start: 107.5%;
 	}
 
 	.social-media-container {
-		max-width: 860px;
+		max-width: 900px;
 		display: flex;
 		flex-direction: column;
 		border-right: 1px solid white;
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			border-right: 0;
+		}
 		.social-media-links {
 			display: flex;
 			justify-content: space-around;
 			min-height: 70px;
+			@media screen and (max-width: breakpoints.$phone-down) {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-left: 3rem;
+			}
 
-			.button a {
-				color: $black;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: 1.25rem;
-				width: 100%;
-				height: 100%;
-				padding: 0.5rem 3rem;
-				background-color: $yellow;
-				border: 5px solid $black;
+			.button {
+				@media screen and (max-width: breakpoints.$phone-down) {
+					min-height: 50px;
+				}
 
-				&:hover {
-					border-color: $yellow;
-					background-color: white;
+				a {
+					color: $black;
+					text-decoration: none;
+					font-weight: bold;
+					font-size: 1.25rem;
+					width: 100%;
+					height: 100%;
+					padding: 0.5rem 3rem;
+					background-color: $yellow;
+					border: 5px solid $black;
+
+					@media screen and (max-width: breakpoints.$tablet-up) {
+						padding: 0.5rem 1rem;
+					}
+					@media screen and (max-width: breakpoints.$phone-down) {
+						padding: 0.5rem 3rem;
+					}
+
+					&:hover {
+						border-color: $yellow;
+						background-color: white;
+					}
 				}
 			}
 		}
@@ -241,6 +396,15 @@ $translate-start: 107.5%;
 		color: $black;
 		text-transform: uppercase;
 
+		@media screen and (max-width: breakpoints.$desktop-down) {
+			margin-right: 5%;
+		}
+
+		@media screen and (max-width: breakpoints.$desktop-up) {
+			width: 90%;
+			margin: auto;
+		}
+
 		h2 {
 			position: relative;
 			width: 300px;
@@ -251,6 +415,11 @@ $translate-start: 107.5%;
 			z-index: 2;
 			margin-left: auto;
 			text-align: right;
+
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				font-size: 1.75rem;
+				width: 250px;
+			}
 		}
 
 		p {
@@ -265,6 +434,19 @@ $translate-start: 107.5%;
 			padding: 1rem;
 			margin-left: auto;
 			text-align: right;
+
+			@media screen and (max-width: breakpoints.$desktop-up) {
+				width: 95%;
+			}
+
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				width: 85%;
+				font-size: 1rem;
+				top: -2.5rem;
+			}
+			@media screen and (max-width: breakpoints.$phone-down) {
+				width: 80%;
+			}
 		}
 	}
 	#year-link-nineties:hover {

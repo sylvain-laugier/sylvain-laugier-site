@@ -12,14 +12,13 @@ export default function YearLink({
 	setDesignEra,
 	selected,
 	children,
-	id
+	id,
 }: PropsWithChildren<YearLinkProps>) {
 	return (
 		<div
 			className={`year-link ${selected ? 'year-link-selected' : ''}`}
 			id={id}
 			onClick={() => {
-				topFunction();
 				setDesignEra(designEra);
 			}}
 		>

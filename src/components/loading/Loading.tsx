@@ -4,17 +4,13 @@ import { Delorean } from './Delorean';
 import { Portal } from './Portal';
 import { Light } from './Light';
 
-const range = [...new Array(30)];
+const starRange = [...new Array(30)];
 
-interface LoadingProps {
-	loading: boolean;
-}
-
-export default function Loading({ loading }: LoadingProps) {
+export default function Loading() {
 	return (
 		<div className="loading-screen">
 			<div className="star-container">
-				{range.map(() => (
+				{starRange.map(() => (
 					<div className="star" />
 				))}
 			</div>
@@ -24,6 +20,7 @@ export default function Loading({ loading }: LoadingProps) {
 				<Portal explosion={false} />
 			</div>
 			<div className="background-container">
+				<Light />
 				<Light />
 				<Light />
 				<Light />

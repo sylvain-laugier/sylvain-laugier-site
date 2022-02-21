@@ -54,7 +54,7 @@ $accent: #fafafa;
 		background-size: cover;
 		background-position: center;
 		height: 100vh;
-		width: 100%;
+		width: 50%;
 		top: 0;
 
 		position: absolute;
@@ -102,7 +102,7 @@ $accent: #fafafa;
 
 		h1 {
 			text-transform: uppercase;
-			font-size: 4.3rem;
+			font-size: 5rem;
 			letter-spacing: 8px;
 			font-weight: 300;
 		}
@@ -126,8 +126,8 @@ $accent: #fafafa;
 	.what-i-was-doing-container {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		grid-gap: 50px;
-		padding-top: 50px;
+		grid-gap: 3rem;
+		padding: 3rem 0;
 		@media screen and (max-width: breakpoints.$tablet-down) {
 			display: block;
 		}
@@ -142,12 +142,14 @@ $accent: #fafafa;
 			max-width: 640px;
 			color: $accent;
 			margin-top: -1rem;
+			@media screen and (max-width: breakpoints.$tablet-down) {
+				margin-left: 0;
+			}
 		}
 
 		img {
 			width: 100%;
 			max-width: 800px;
-			margin-bottom: 1rem;
 			@media screen and (max-width: breakpoints.$tablet-down) {
 				display: none;
 			}

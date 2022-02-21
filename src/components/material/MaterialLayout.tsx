@@ -27,7 +27,7 @@ import CodinGameLogo from '../../images/codingame-logo.svg';
 
 export function MaterialLayout() {
 	return (
-		<Grid container>
+		<Grid container style={{ paddingTop: '4rem' }}>
 			<Grid item xs={12} md={8}>
 				<div className="first-grid-content">
 					<Container className="title-intro-container">

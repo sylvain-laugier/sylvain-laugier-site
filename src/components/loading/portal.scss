@@ -12,7 +12,8 @@
 	width: 75px;
 	border-top-left-radius: 25%;
 	border-bottom-left-radius: 25%;
-	animation: wobble 500ms 2s ease-in infinite, scale-up-for-halo 2s ease-out;
+	animation: wobble 500ms 2s ease-in infinite, scale-up-for-halo 2s ease-out,
+		scale-up-for-halo 300ms 3.3s ease-in reverse;
 	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -21,7 +22,7 @@
 	opacity: 0;
 	border-top-left-radius: 50%;
 	border-bottom-left-radius: 50%;
-	animation: scale-up 1s 3s ease-out;
+	animation: scale-up 0.4s 3s ease-out, scale-up 100ms 3.3s ease-in reverse;
 	z-index: 12;
 }
 

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { designEras, DesignEras } from '../utils/constants';
 import YearList from '../components/shared/YearList';
 import { NinetiesLayout } from '../components/nineties';
@@ -13,13 +13,18 @@ const IndexPage = () => {
 	const [designEra, setDesignEra] = useState<DesignEras>(designEras.now);
 	const [loading, setLoading] = useState(false);
 
-	const changeDesignEra = useCallback((designEra: DesignEras) => {
-		setLoading(true);
-		setTimeout(() => {
-			setLoading(false);
-			setDesignEra(designEra);
-		}, 6000); // 6000
-	}, []);
+	const changeDesignEra = useCallback(
+		(newDesignEra: DesignEras) => {
+			if (newDesignEra !== designEra) {
+				setLoading(true);
+				setTimeout(() => {
+					setLoading(false);
+					setDesignEra(newDesignEra);
+				}, 4500);
+			}
+		},
+		[designEra]
+	);
 
 	return (
 		<main className={`${loading ? 'app-loading' : ''} App`}>
@@ -40,7 +45,7 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className="loading-container">
-				<Loading loading={loading} />
+				<Loading />
 			</div>
 		</main>
 	);

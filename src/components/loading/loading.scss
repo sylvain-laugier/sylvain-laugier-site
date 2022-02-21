@@ -1,8 +1,10 @@
+@use '../../_breakpoints.scss';
+
 $height: 300px;
 $width: calc($height / 4);
 $light-color: #fbf48d;
 $horizon: 36vh;
-$strafe-duration: 2.5s;
+
 $shining-time: 3s;
 $car-width: 1080px;
 
@@ -78,7 +80,7 @@ $car-width: 1080px;
 }
 
 .svg-car-container {
-	animation: disappear 7.5s linear;
+	animation: disappear 6.7s linear;
 	z-index: 10;
 }
 
@@ -114,9 +116,9 @@ $car-width: 1080px;
 .particule-container {
 	position: relative;
 	height: 410px;
-	top: 50px;
+	top: 100px;
 	right: 50px;
-	animation: disappear 8s linear;
+	animation: disappear 7s linear;
 }
 
 .explosion-container {
@@ -126,7 +128,7 @@ $car-width: 1080px;
 	display: flex;
 	justify-content: center;
 	top: 20%;
-	animation: disappear 10s linear;
+	animation: disappear 7.75s linear;
 	z-index: 15;
 }
 
@@ -135,7 +137,7 @@ $car-width: 1080px;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	padding: $horizon 0;
 	top: 0;
 	left: 0;
@@ -173,7 +175,28 @@ $car-width: 1080px;
 	width: $width;
 	position: absolute;
 	z-index: 2;
-	animation: strafleft $strafe-duration linear infinite;
+
+	@media screen and (max-width: breakpoints.$widescreen-up) {
+		&:nth-child(6) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: breakpoints.$desktop-up) {
+		&:nth-child(5) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: breakpoints.$tablet-down) {
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		&:nth-child(3) {
+			display: none;
+		}
+	}
 }
 
 .lights {
@@ -238,17 +261,35 @@ $car-width: 1080px;
 	width: 0.4 * $width;
 }
 
-$number-of-lights: 5;
+$number-of-lights: 6;
 
 @for $i from 1 through $number-of-lights {
 	.light:nth-child(#{$i}) {
-		animation-delay: (calc(1 / $number-of-lights) * -$i) * $strafe-duration;
+		animation: strafleft 2.5s linear infinite;
+		animation-delay: (calc(1 / $number-of-lights) * -$i) * 2.5s;
+
+		@media screen and (max-width: breakpoints.$widescreen-up) {
+			animation: strafleft 2s linear infinite;
+			animation-delay: (calc(1 / ($number-of-lights - 1)) * -$i) * 2s;
+		}
+		@media screen and (max-width: breakpoints.$desktop-up) {
+			animation: strafleft 1.5s linear infinite;
+			animation-delay: (calc(1 / ($number-of-lights - 2)) * -$i) * 1.3s;
+		}
+		@media screen and (max-width: breakpoints.$tablet-down) {
+			animation: strafleft 1s linear infinite;
+			animation-delay: (calc(1 / ($number-of-lights - 3)) * -$i) * 1s;
+		}
+		@media screen and (max-width: 600px) {
+			animation: strafleft 0.75s linear infinite;
+			animation-delay: (calc(1 / ($number-of-lights - 4)) * -$i) * 0.75s;
+		}
 	}
 }
 
-.light:nth-child(1) {
-	transform: translateX(-25vw);
-}
+// .light:nth-child(1) {
+// 	transform: translateX(-25vw);
+// }
 
 @keyframes disappear {
 	0% {
@@ -300,13 +341,13 @@ $number-of-lights: 5;
 		opacity: 0;
 	}
 	0.01% {
-		transform: translateX(70vw);
+		transform: translateX(100vw);
 	}
 	0.02% {
 		opacity: 1;
 	}
 
 	100% {
-		transform: translateX(-70vw);
+		transform: translateX(-100vw);
 	}
 }

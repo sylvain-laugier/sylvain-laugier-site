@@ -70,7 +70,9 @@ html {
 }
 
 .app-loading .MuiAppBar-positionFixed {
-	position: relative !important;
+	position: absolute !important;
+	width: 50%;
+	left: 0;
 }
 
 .loading-container {
@@ -116,10 +118,6 @@ html {
 		&:last-of-type {
 			border-right: none;
 		}
-	}
-
-	.year-link-selected {
-		font-weight: bold;
 	}
 
 	#year-link-nineties:hover {
