@@ -10,9 +10,10 @@ interface SocialMediaLinksProps {
 }
 
 export const socialMedialinks = {
-	linkedIn: 'https://linkedin.com',
-	github: 'https://github.com',
-	codinGame: 'https://www.codingame.com/',
+	linkedIn: 'https://www.linkedin.com/in/sylvainlaugier/',
+	github: 'https://github.com/sylvain-laugier',
+	codinGame:
+		'https://www.codingame.com/profile/1fc92142b63f645e0ae6b423b8c1e7820619412',
 } as const;
 
 export default function SocialMediaLinks({ mode }: SocialMediaLinksProps) {
@@ -55,7 +56,7 @@ export default function SocialMediaLinks({ mode }: SocialMediaLinksProps) {
 				<Button
 					className="codingame"
 					label="CodinGame"
-					href={socialMedialinks.github}
+					href={socialMedialinks.codinGame}
 				/>
 			</div>
 		</div>

@@ -103,7 +103,7 @@ $translate-start: 107.5%;
 			}
 		}
 		h1.initial-aniamtion span {
-			animation-delay: $animation-speed / -2;
+			animation-delay: calc($animation-speed / -2);
 		}
 		h1.title-animation span {
 			transform: translateX($translate-start);
@@ -128,7 +128,7 @@ $translate-start: 107.5%;
 			}
 		}
 		h2.title-animation span {
-			animation-delay: $animation-speed / 2;
+			animation-delay: calc($animation-speed / 2);
 		}
 
 		@media screen and (max-width: 1620px) {

@@ -5,6 +5,7 @@ import SocialMediaLinks from '../shared/SocialMediaLinks';
 import Technologies from '../shared/Technologies';
 import TitleIntro from '../shared/TitleIntro';
 import YearList from '../shared/YearList';
+import WhatIWasDoing from '../shared/WhatIWasDoing';
 
 interface NowLayoutProps {
 	setDesignEra: React.Dispatch<React.SetStateAction<DesignEras>>;
@@ -15,10 +16,7 @@ export function NowLayout({ setDesignEra }: NowLayoutProps) {
 			<div className="left-content">
 				<TitleIntro />
 				<div className="tagline">
-					<p>
-						Développeur full stack JS à la recherche de sa prochaine expérience
-						professionnelle à Paris.
-					</p>
+					<WhatIWasDoing designEra={designEras.now} />
 				</div>
 				<Technologies mode="grouped" />
 				<YearList

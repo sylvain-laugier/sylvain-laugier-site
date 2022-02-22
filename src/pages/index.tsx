@@ -1,4 +1,6 @@
 import React, { useCallback, useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Helmet from 'react-helmet';
 import { designEras, DesignEras } from '../utils/constants';
 import YearList from '../components/shared/YearList';
 import { NinetiesLayout } from '../components/nineties';
@@ -12,6 +14,17 @@ import Loading from '../components/loading/Loading';
 const IndexPage = () => {
 	const [designEra, setDesignEra] = useState<DesignEras>(designEras.now);
 	const [loading, setLoading] = useState(false);
+	const { site } = useStaticQuery(query);
+
+	const {
+		title,
+		description,
+		siteUrl,
+		defaultImage,
+		twitterUsername,
+	} = site.siteMetadata;
+
+	const image = `${siteUrl}/${defaultImage}`;
 
 	const changeDesignEra = useCallback(
 		(newDesignEra: DesignEras) => {
@@ -28,8 +41,21 @@ const IndexPage = () => {
 
 	return (
 		<main className={`${loading ? 'app-loading' : ''} App`}>
-			<title>Home Page</title>
-
+			<Helmet title={title}>
+				<meta name="description" content={description} />
+				<meta name="image" content={image} />
+				<meta property="og:url" content={siteUrl} />
+				<meta property="og:title" content={title} />
+				<meta property="og:description" content={description} />
+				<meta property="og:image" content={image} />
+				<meta name="twitter:card" content="summary_large_image" />
+				{twitterUsername && (
+					<meta name="twitter:creator" content={twitterUsername} />
+				)}
+				<meta name="twitter:title" content={title} />
+				<meta name="twitter:description" content={description} />
+				<meta name="twitter:image" content={image} />
+			</Helmet>
 			<div className="div-id">
 				<div id={designEra}>
 					<div className="home">
@@ -73,3 +99,17 @@ function getYearLayoutComponent(designEra: DesignEras, setDesignEra) {
 }
 
 export default IndexPage;
+
+const query = graphql`
+	query SEO {
+		site {
+			siteMetadata {
+				title
+				description
+				siteUrl
+				defaultImage: image
+				twitterUsername
+			}
+		}
+	}
+`;

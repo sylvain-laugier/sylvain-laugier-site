@@ -7,6 +7,7 @@
 	position: absolute;
 	background-image: url('../../images/hubble_deep_field.jpg');
 	background-repeat: repeat;
+	min-height: 100vh;
 
 	.year-list-container {
 		border-color: yellow;
@@ -37,7 +38,7 @@
 		max-width: 872px;
 		width: calc(100vw - 32px);
 		margin: 32px auto;
-		height: 100%;
+
 		padding: 16px;
 		background-color: black;
 		box-sizing: border-box;

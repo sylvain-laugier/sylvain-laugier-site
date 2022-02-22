@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export const designEras = {
 	nineties: 'nineties',
 	noughties: 'noughties',
@@ -9,7 +11,7 @@ export const designEras = {
 
 export type DesignEras = typeof designEras[keyof typeof designEras];
 
-export type DesignEraMap = { [key in DesignEras]: string };
+export type DesignEraMap = { [key in DesignEras]: string | ReactNode };
 export const designEraToYearMap: DesignEraMap = {
 	[designEras.nineties]: '1999',
 	[designEras.noughties]: '2005',
