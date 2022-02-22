@@ -43,7 +43,7 @@ export default function YearList({
 			{currentDesignEra === designEras.now && (
 				<>
 					<h2>Ce site dispose d'une machine à voyager dans le temps !</h2>
-					<p>Choissisez votre destination !</p>
+					<p>Choisissez votre destination !</p>
 				</>
 			)}
 			<div className="year-list-container">
