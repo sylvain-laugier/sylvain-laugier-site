@@ -275,7 +275,7 @@ $car-width: 1080px;
 	width: 0.4 * $width;
 }
 
-@media screen and (min-aspect-ratio: 33 /17) {
+@media screen and (min-aspect-ratio: 42 /17) {
 	.parking-floor {
 		height: calc(80vh - 300px);
 		top: calc(20vh + 300px);
