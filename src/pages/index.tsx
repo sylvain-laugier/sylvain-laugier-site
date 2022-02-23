@@ -33,7 +33,7 @@ const IndexPage = () => {
 				setTimeout(() => {
 					setLoading(false);
 					setDesignEra(newDesignEra);
-				}, 450000);
+				}, 4500);
 			}
 		},
 		[designEra]
