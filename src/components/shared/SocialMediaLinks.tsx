@@ -4,7 +4,7 @@ import LinkedInNinetiesButton from '../../images/button_nineties_linkedin.png';
 import GitHubNinetiesButton from '../../images/button_nineties_github.png';
 import CodinGameNinetiesButton from '../../images/button_nineties_codingame.png';
 
-type Mode = 'nineties';
+type Mode = 'nineties' | 'flat-design';
 interface SocialMediaLinksProps {
 	mode?: Mode;
 }
@@ -17,6 +17,33 @@ export const socialMedialinks = {
 } as const;
 
 export default function SocialMediaLinks({ mode }: SocialMediaLinksProps) {
+	if (mode === 'flat-design') {
+		return (
+			<div className="social-media-container">
+				<h2>Retrouvez moi sur </h2>
+				<div className="social-media-links">
+					<div className={`button linkedin`}>
+						<div className="button-background"></div>
+						<a href={socialMedialinks.linkedIn} target="_blank">
+							Linkedin
+						</a>
+					</div>
+					<div className={`button github`}>
+						<div className="button-background"></div>
+						<a href={socialMedialinks.github} target="_blank">
+							Github
+						</a>
+					</div>
+					<div className={`button codingame`}>
+						<div className="button-background"></div>
+						<a href={socialMedialinks.codinGame} target="_blank">
+							CodinGame
+						</a>
+					</div>
+				</div>
+			</div>
+		);
+	}
 	if (mode === 'nineties') {
 		return (
 			<div className="social-media-container">

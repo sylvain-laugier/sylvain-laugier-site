@@ -241,13 +241,15 @@ $translate-start: 107.5%;
 		p {
 			width: 720px;
 			background-color: $secondary;
-			font-size: 1.25rem;
+			font-size: 1.5rem;
 			border: 5px solid $black;
 			z-index: 1;
 			position: relative;
 			top: -3rem;
 			left: 3rem;
 			padding: 1rem;
+			font-family: $courier;
+			color: white;
 
 			@media screen and (max-width: breakpoints.$desktop-up) {
 				width: 95%;
@@ -255,7 +257,7 @@ $translate-start: 107.5%;
 
 			@media screen and (max-width: breakpoints.$tablet-down) {
 				width: 85%;
-				font-size: 1rem;
+				font-size: 1.25rem;
 				top: -2.5rem;
 			}
 			@media screen and (max-width: breakpoints.$phone-down) {
@@ -429,7 +431,7 @@ $translate-start: 107.5%;
 		p {
 			width: 720px;
 			background-color: $secondary;
-			font-size: 1.25rem;
+			font-size: 1.5rem;
 			border: 5px solid $black;
 			z-index: 1;
 			position: relative;
@@ -438,6 +440,8 @@ $translate-start: 107.5%;
 			padding: 1rem;
 			margin-left: auto;
 			text-align: right;
+			font-family: $courier;
+			color: white;
 
 			@media screen and (max-width: breakpoints.$desktop-up) {
 				width: 95%;
@@ -445,7 +449,7 @@ $translate-start: 107.5%;
 
 			@media screen and (max-width: breakpoints.$tablet-down) {
 				width: 85%;
-				font-size: 1rem;
+				font-size: 1.25rem;
 				top: -2.5rem;
 			}
 			@media screen and (max-width: breakpoints.$phone-down) {

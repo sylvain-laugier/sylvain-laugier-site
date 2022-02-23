@@ -275,6 +275,19 @@ $car-width: 1080px;
 	width: 0.4 * $width;
 }
 
+@media screen and (min-aspect-ratio: 33 /17) {
+	.parking-floor {
+		height: calc(80vh - 300px);
+		top: calc(20vh + 300px);
+	}
+	.background-container {
+		padding: 20vh 0;
+	}
+	.delorean-container {
+		top: 28vh;
+	}
+}
+
 $number-of-lights: 6;
 
 @for $i from 1 through $number-of-lights {

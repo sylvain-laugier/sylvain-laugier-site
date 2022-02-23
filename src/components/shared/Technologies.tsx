@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 type Mode = 'grouped' | 'material';
 interface TechnologiesProps {
 	mode?: Mode;
-	frontLogo?: string;
-	backLogo?: string;
-	devOpsLogo?: string;
+	FrontLogo?: ReactNode;
+	BackLogo?: ReactNode;
+	DevOpsLogo?: ReactNode;
 }
 
 export default function Technologies({
 	mode,
-	frontLogo,
-	backLogo,
-	devOpsLogo,
+	FrontLogo,
+	BackLogo,
+	DevOpsLogo,
 }: TechnologiesProps) {
 	if (mode === 'grouped') {
 		return (
@@ -23,7 +23,7 @@ export default function Technologies({
 					<div className="technologie-section">
 						<div className="technologie-background"></div>
 						<h3>Front-End</h3>
-						{frontLogo && <img src={frontLogo}></img>}
+						{FrontLogo || <></>}
 						<ul>
 							<li> React</li>
 							<li> Typescript</li>
@@ -38,7 +38,7 @@ export default function Technologies({
 					<div className="technologie-section">
 						<div className="technologie-background"></div>
 						<h3>Back-end</h3>
-						{backLogo && <img src={backLogo}></img>}
+						{BackLogo || <></>}
 						<ul>
 							<li> NodeJs</li>
 							<li> MongoDB</li>
@@ -51,7 +51,7 @@ export default function Technologies({
 					<div className="technologie-section">
 						<div className="technologie-background"></div>
 						<h3>Devops</h3>
-						{devOpsLogo && <img src={devOpsLogo}></img>}
+						{DevOpsLogo || <></>}
 						<ul>
 							<li> AWS</li>
 							<li> GCP</li>

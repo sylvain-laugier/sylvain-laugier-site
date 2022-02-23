@@ -130,6 +130,7 @@ $accent: #fafafa;
 		padding: 3rem 0;
 		@media screen and (max-width: breakpoints.$tablet-down) {
 			display: block;
+			padding-bottom: 0.5rem;
 		}
 
 		.top-line {
@@ -151,7 +152,7 @@ $accent: #fafafa;
 			width: 100%;
 			max-width: 800px;
 			@media screen and (max-width: breakpoints.$tablet-down) {
-				display: none;
+				margin-top: 3rem;
 			}
 		}
 	}
@@ -176,6 +177,12 @@ $accent: #fafafa;
 				h3 {
 					font-size: 1.75rem;
 					font-weight: 400;
+				}
+
+				img {
+					@media screen and (max-width: breakpoints.$phone-down) {
+						width: 96px;
+					}
 				}
 
 				ul {
@@ -213,6 +220,8 @@ $accent: #fafafa;
 			}
 			.button {
 				height: 100px;
+				position: relative;
+				overflow-x: hidden;
 				a {
 					width: 100%;
 					height: 100%;
@@ -222,16 +231,38 @@ $accent: #fafafa;
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					position: relative;
+				}
+				&:hover .button-background {
+					transform: translateX(-125%);
 				}
 			}
 
-			.linkedin {
+			.linkedin:hover a {
+				color: #0e76a8;
+			}
+			.github:hover a {
+				color: #171515;
+			}
+			.codingame:hover a {
+				color: #fcd207;
+			}
+
+			.button-background {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				transform: translateX(0);
+				transition: transform 200ms ease-in-out;
+			}
+
+			.linkedin .button-background {
 				background-color: #0e76a8;
 			}
-			.github {
+			.github .button-background {
 				background-color: #171515;
 			}
-			.codingame {
+			.codingame .button-background {
 				background-color: #fcd207;
 			}
 		}

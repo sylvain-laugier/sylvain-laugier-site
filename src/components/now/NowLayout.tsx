@@ -26,12 +26,12 @@ export function NowLayout({ setDesignEra }: NowLayoutProps) {
 			</div>
 			<div className="right-content">
 				<div className="right-content-container">
-					<h2>En savoir plus</h2>
+					<h2>A propos de moi</h2>
 					<div className="description">
-						Développeur auto-didacte, je code depuis 6 ans dont la moitié en
-						entreprise en tant que développeur full stack javascript. J'aime
-						développer des interfaces créatives et des systèmes modernes et j'ai
-						une forte appétence pour le design web.
+						Professionnel du web depuis 5 ans, j’ai été chef de projet web
+						pendant 2 ans et développeur pendant 3 ans dont la moitié au Canada.
+						Polyvalent et autodidacte, j'aime mener à terme des projets web
+						modernes et créatifs.
 					</div>
 					<SocialMediaLinks />
 				</div>

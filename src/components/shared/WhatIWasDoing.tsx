@@ -17,18 +17,18 @@ const content: DesignEraMap = {
 			En 1999, j'ai 9 ans et mon usage de l'informatique se résume à des
 			expérimentations sur l'ordinateur familial. Je suis déjá néanmois fasciné
 			par l'outil bien que je ne dispose que de word et du Démineur. Quant à
-			internet il ne s'agit a l'époque que d'une chose lointaine abritant
+			internet, il ne s'agit a l'époque que d'une chose lointaine abritant
 			paraît-il la soluce pour obtenir Mew dans Pokemon.
 		</>
 	),
 	[designEras.noughties]: (
 		<>
 			C'est en 2005, à 15 ans, que j'ai mon premier rapport au développement
-			informatique, par curiosité je suis le cours de C++ sur le site du zéro,
+			informatique. Par curiosité, je suis le cours de C++ sur le site du zéro,
 			mais tout cela est encore trop abstrait pour moi et je finis par passer
-			mes journées sur le logiciel RPG maker, outil permettant de créer des jeux
+			mes journées sur le logiciel RPG maker, qui permet de créer des jeux
 			vidéos 16 bit en no-code. Bien que sans syntaxe, l'outil met à disposition
-			les outils d'un vrai langage (boucles, variables, instructions
+			les logiques d'un vrai langage (boucles, variables, instructions
 			conditionnelles), ce qui me familiarise avec les concepts de
 			programmation.
 		</>
@@ -39,41 +39,39 @@ const content: DesignEraMap = {
 			après 2 années en DUT Techniques de Commercialisation et une année
 			d'Erasmus à Jyväskylä en Finlande. Mon intérêt pour les technologies me
 			pousse à me spécialiser dans le management de l'innovation et des
-			start-up. Ma pratique du code se résume alors a des connaissances basiques
-			en HTML et Wordpress que j'acquiers dans le but de développer des projets
+			start-up. Ma pratique du code se résume alors à des connaissances basiques
+			en HTML et Wordpress que j'acquiers pour développer des projets
 			personnels.
 		</>
 	),
 	[designEras.material]: (
 		<>
-			En 2015 je termine mon école de commerce et me lance dans plusieurs
-			projets personnels. D'abord je décide de m'investir sérieusement dans
-			l'apprentissage du développement web, je suis le cours en ligne{' '}
-			<i>the Odin Project</i> dans lequel j'apprends Ruby on Rails et
-			Javascript. Ensuite, je met en application ces compétences en créeant avec
-			deux partenaires le site slyberry.tv (aujourd'hui fermé), permettant de{' '}
-			<i>binge watcher</i> des vidéos youtube par thématique. <br />
+			En 2015 je suis diplômé de l'école de management et je me lance dans
+			plusieurs projets personnels. Dans un premier temps, je décide de
+			m'investir sérieusement dans l'apprentissage du développement web et je
+			suis le cours en ligne <i>the Odin Project</i> dans lequel j'apprends Ruby
+			on Rails et Javascript. Puis je mets en application ces compétences en
+			créant avec deux partenaires le site slyberry.tv (aujourd'hui fermé),
+			permettant de <i>binge watcher</i> des vidéos youtube par thématique.{' '}
+			<br />
 			Dans le même temps je réalise des missions de freelance en web design et
 			en{' '}
 			<Link href="https://www.youtube.com/watch?v=TXNcRRnF-EY" target="_blank">
-				réalisation de vidéos musciales.
+				réalisation de vidéos musicales.
 			</Link>{' '}
 			<br />
-			Cherchant plus de stabilité et une expérience plus profesionnelle, je
-			décide 1 an plus tard d'intégrer l'agence Equinoa en tant que chef de
-			projet web.
+			J'intègre 1 an plus tard l'agence Equinoa en tant que chef de projet web.
 		</>
 	),
 	[designEras.brutalism]: (
 		<>
 			C'est en 2018 que je deviens développeur. <br />
 			Pendant les deux années précédentes au sein d'Equinoa, je me passionne de
-			plus en plus pour le code et je passe de nombreuses soirées et week-end à
+			plus en plus pour le code et je passe de nombreuses soirées et week-ends à
 			apprendre le javascript moderne et à experimenter. <br /> Faire de cette
-			passion mon métier devient alors une évidence et je démissionne de mon
-			poste de chef de projet web et je deviens développeur full stack
-			Javascript au sein du département innovation de l'entreprise de robotique
-			Balyo.
+			passion mon métier devient alors une évidence et je deviens développeur
+			full stack Javascript au sein du département innovation de l'entreprise de
+			robotique Balyo.
 		</>
 	),
 	[designEras.now]: `Développeur full stack JS à la recherche de sa prochaine expérience professionnelle à Paris.`,

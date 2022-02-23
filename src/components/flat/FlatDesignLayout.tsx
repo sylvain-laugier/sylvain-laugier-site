@@ -37,11 +37,11 @@ export function FlatDesignLayout() {
 				<div className="content-container">
 					<Technologies
 						mode="grouped"
-						frontLogo={FlatLogoFrontEnd}
-						backLogo={FlatLogoBackEnd}
-						devOpsLogo={FlatLogoDevops}
+						FrontLogo={<img src={FlatLogoFrontEnd}></img>}
+						BackLogo={<img src={FlatLogoBackEnd}></img>}
+						DevOpsLogo={<img src={FlatLogoDevops}></img>}
 					/>
-					<SocialMediaLinks />
+					<SocialMediaLinks mode={designEras.flatDesign} />
 				</div>
 			</div>
 			<HistoryOfWebDesign designEra={designEras.flatDesign} />
